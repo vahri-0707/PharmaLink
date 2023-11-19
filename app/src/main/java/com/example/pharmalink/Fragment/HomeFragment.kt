@@ -14,6 +14,7 @@ import com.example.pharmalink.R
 import com.example.pharmalink.adapter.PopularAdapter
 import com.example.pharmalink.databinding.FragmentHomeBinding
 
+
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
 
@@ -34,9 +35,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val imageList = ArrayList<SlideModel>()
-        imageList.add(SlideModel(R.drawable.soto, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.lemak, ScaleTypes.FIT))
-        imageList.add(SlideModel(R.drawable.sate, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner_1, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner_2, ScaleTypes.FIT))
+        imageList.add(SlideModel(R.drawable.banner_3, ScaleTypes.FIT))
 
         val imageSlider = binding.imageSlider
         imageSlider.setImageList(imageList)
@@ -55,10 +56,15 @@ class HomeFragment : Fragment() {
         })
         val namaBarang = listOf("Paracetamol","Procold","Bodrex","Amoxcilin")
         val Price = listOf("Rp. 5000", "Rp. 7000", "Rp. 5000", "Rp. 15000")
-        val fotoBarangTerlarisImages = listOf(R.drawable.paracetamol, R.drawable.procold, R.drawable.bodrex, R.drawable.amoxcilin)
+        val fotoBarangTerlarisImages = listOf(R.drawable.medicine_paracetamol, R.drawable.medicine_procold, R.drawable.medicine_bodrex, R.drawable.medicine_amoxiline)
 
         val adapter = PopularAdapter(namaBarang, Price, fotoBarangTerlarisImages)
-        binding.PopularRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+
+        // Use a GridLayoutManager with 2 columns
+        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.PopularRecyclerView.layoutManager = layoutManager
+
         binding.PopularRecyclerView.adapter = adapter
     }
 
