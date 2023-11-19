@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687692583488",
+    "project_id": "pharmalink-96911",
+    "storage_bucket": "pharmalink-96911.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687692583488:android:da4130e0c9c7be653105a5",
+        "android_client_info": {
+          "package_name": "com.example.pharmalink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIzp3-oQN9MYJLZEqWuwxYhATCtE23LmA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
