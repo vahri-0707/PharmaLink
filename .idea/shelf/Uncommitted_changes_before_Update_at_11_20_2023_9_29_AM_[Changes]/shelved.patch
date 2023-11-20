@@ -1,0 +1,420 @@
+Index: app/src/main/java/com/example/pharmalink/Fragment/CartFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.pharmalink.Fragment\r\n\r\nimport android.os.Bundle\r\nimport androidx.fragment.app.Fragment\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport com.example.pharmalink.R\r\n\r\n// TODO: Rename parameter arguments, choose names that match\r\n// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER\r\nprivate const val ARG_PARAM1 = \"param1\"\r\nprivate const val ARG_PARAM2 = \"param2\"\r\n\r\n/**\r\n * A simple [Fragment] subclass.\r\n * Use the [CartFragment.newInstance] factory method to\r\n * create an instance of this fragment.\r\n */\r\nclass CartFragment : Fragment() {\r\n    // TODO: Rename and change types of parameters\r\n    private var param1: String? = null\r\n    private var param2: String? = null\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n            param1 = it.getString(ARG_PARAM1)\r\n            param2 = it.getString(ARG_PARAM2)\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n        // Inflate the layout for this fragment\r\n        return inflater.inflate(R.layout.fragment_cart, container, false)\r\n    }\r\n\r\n    companion object {\r\n        /**\r\n         * Use this factory method to create a new instance of\r\n         * this fragment using the provided parameters.\r\n         *\r\n         * @param param1 Parameter 1.\r\n         * @param param2 Parameter 2.\r\n         * @return A new instance of fragment CartFragment.\r\n         */\r\n        // TODO: Rename and change types and number of parameters\r\n        @JvmStatic\r\n        fun newInstance(param1: String, param2: String) =\r\n            CartFragment().apply {\r\n                arguments = Bundle().apply {\r\n                    putString(ARG_PARAM1, param1)\r\n                    putString(ARG_PARAM2, param2)\r\n                }\r\n            }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/Fragment/CartFragment.kt b/app/src/main/java/com/example/pharmalink/Fragment/CartFragment.kt
+--- a/app/src/main/java/com/example/pharmalink/Fragment/CartFragment.kt	(revision 952586e4f116603621594e7fdbbf99abe2baef2f)
++++ b/app/src/main/java/com/example/pharmalink/Fragment/CartFragment.kt	(date 1700418913772)
+@@ -5,56 +5,39 @@
+ import android.view.LayoutInflater
+ import android.view.View
+ import android.view.ViewGroup
++import androidx.recyclerview.widget.LinearLayoutManager
+ import com.example.pharmalink.R
++import com.example.pharmalink.adapter.CartAdapter
++import com.example.pharmalink.databinding.FragmentCartBinding
+ 
+-// TODO: Rename parameter arguments, choose names that match
+-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+-private const val ARG_PARAM1 = "param1"
+-private const val ARG_PARAM2 = "param2"
+-
+-/**
+- * A simple [Fragment] subclass.
+- * Use the [CartFragment.newInstance] factory method to
+- * create an instance of this fragment.
+- */
+ class CartFragment : Fragment() {
+-    // TODO: Rename and change types of parameters
+-    private var param1: String? = null
+-    private var param2: String? = null
+-
++    private lateinit var binding: FragmentCartBinding
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        arguments?.let {
+-            param1 = it.getString(ARG_PARAM1)
+-            param2 = it.getString(ARG_PARAM2)
+-        }
++
+     }
+ 
+     override fun onCreateView(
+         inflater: LayoutInflater, container: ViewGroup?,
+         savedInstanceState: Bundle?
+     ): View? {
+-        // Inflate the layout for this fragment
+-        return inflater.inflate(R.layout.fragment_cart, container, false)
++        binding = FragmentCartBinding.inflate(inflater, container, false)
++
++        val cartDrugName = listOf("Paracetamol","Procold","Bodrex","Amoxcilin")
++        val cartItemPrice = listOf("Rp. 5000", "Rp. 7000", "Rp. 5000", "Rp. 15000")
++        val cartImage = listOf(
++            R.drawable.paracetamol,
++            R.drawable.procold,
++            R.drawable.bodrex,
++            R.drawable.amoxcilin)
++
++        val adapter = CartAdapter(ArrayList(cartDrugName), ArrayList(cartItemPrice), ArrayList(cartImage))
++        binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
++        binding.cartRecyclerView.adapter = adapter
++        return binding.root
+     }
+ 
+     companion object {
+-        /**
+-         * Use this factory method to create a new instance of
+-         * this fragment using the provided parameters.
+-         *
+-         * @param param1 Parameter 1.
+-         * @param param2 Parameter 2.
+-         * @return A new instance of fragment CartFragment.
+-         */
+-        // TODO: Rename and change types and number of parameters
+-        @JvmStatic
+-        fun newInstance(param1: String, param2: String) =
+-            CartFragment().apply {
+-                arguments = Bundle().apply {
+-                    putString(ARG_PARAM1, param1)
+-                    putString(ARG_PARAM2, param2)
+-                }
+-            }
++
+     }
+ }
+\ No newline at end of file
+Index: .idea/deploymentTargetDropDown.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/deploymentTargetDropDown.xml b/.idea/deploymentTargetDropDown.xml
+new file mode 100644
+--- /dev/null	(date 1700419829251)
++++ b/.idea/deploymentTargetDropDown.xml	(date 1700419829251)
+@@ -0,0 +1,17 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="deploymentTargetDropDown">
++    <targetSelectedWithDropDown>
++      <Target>
++        <type value="QUICK_BOOT_TARGET" />
++        <deviceKey>
++          <Key>
++            <type value="VIRTUAL_DEVICE_PATH" />
++            <value value="C:\Users\ASUS\.android\avd\Pixel_5_API_33.avd" />
++          </Key>
++        </deviceKey>
++      </Target>
++    </targetSelectedWithDropDown>
++    <timeTargetWasSelectedWithDropDown value="2023-11-19T18:46:20.157687100Z" />
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/drawable/proceedbuttonshape.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/proceedbuttonshape.xml b/app/src/main/res/drawable/proceedbuttonshape.xml
+new file mode 100644
+--- /dev/null	(date 1700422217274)
++++ b/app/src/main/res/drawable/proceedbuttonshape.xml	(date 1700422217274)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<solid android:color="@color/white"/>
++    <stroke android:color="#f4f4f4" android:width="1dp"/>
++    <corners android:radius="15dp"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_cart.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Fragment.CartFragment\">\r\n\r\n    <!-- TODO: Update blank fragment layout -->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:text=\"cart\" />\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_cart.xml b/app/src/main/res/layout/fragment_cart.xml
+--- a/app/src/main/res/layout/fragment_cart.xml	(revision 952586e4f116603621594e7fdbbf99abe2baef2f)
++++ b/app/src/main/res/layout/fragment_cart.xml	(date 1700422385089)
+@@ -1,5 +1,6 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+@@ -7,8 +8,36 @@
+ 
+     <!-- TODO: Update blank fragment layout -->
+     <TextView
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:text="cart" />
++        android:id="@+id/textView9"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="8dp"
++        android:text="cart"
++        android:textSize="24sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/cartRecyclerView"
++        android:layout_width="0dp"
++        android:layout_height="0dp"
++        android:layout_marginTop="8dp"
++        android:layout_marginBottom="16dp"
++        app:layout_constraintBottom_toTopOf="@+id/button"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView9" />
++
++    <androidx.appcompat.widget.AppCompatButton
++        android:id="@+id/button"
++        android:layout_width="325dp"
++        android:layout_height="57dp"
++        android:layout_marginBottom="8dp"
++        android:background="@drawable/proceedbuttonshape"
++        android:text="LANJUT"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent" />
+ 
+-</FrameLayout>
+\ No newline at end of file
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/pharmalink/adapter/CartAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/adapter/CartAdapter.kt b/app/src/main/java/com/example/pharmalink/adapter/CartAdapter.kt
+new file mode 100644
+--- /dev/null	(date 1700421810507)
++++ b/app/src/main/java/com/example/pharmalink/adapter/CartAdapter.kt	(date 1700421810507)
+@@ -0,0 +1,74 @@
++package com.example.pharmalink.adapter
++
++import android.view.LayoutInflater
++import android.view.ViewGroup
++import androidx.recyclerview.widget.RecyclerView
++import com.example.pharmalink.databinding.CartItemBinding
++
++class CartAdapter (private val CartItems:MutableList<String>, private val CartItemPrice:MutableList<String>, private var CartImage:MutableList<Int>): RecyclerView.Adapter<CartAdapter.CartViewHolder>(){
++
++    private val itemQuantities = IntArray(CartItems.size){1}
++
++    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
++        val binding = CartItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
++        return CartViewHolder(binding)
++    }
++
++    override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
++        holder.bind(position)
++    }
++
++    override fun getItemCount(): Int = CartItems.size
++
++    inner class CartViewHolder(private val binding: CartItemBinding) : RecyclerView.ViewHolder(binding.root) {
++        fun bind(position: Int) {
++            binding.apply {
++                val quantity = itemQuantities[position]
++
++                cartDrugName.text = CartItems[position]
++                cartItemPrice.text = CartItemPrice[position]
++                cartImage.setImageResource(CartImage[position])
++                cartItemQuantity.text = quantity.toString()
++
++                minusButton.setOnClickListener{
++                    deceaseQuantity(position)
++                }
++
++                plusButton.setOnClickListener{
++                    increaseQuantity(position)
++                }
++
++                deleteButton.setOnClickListener{
++                    val itemPosition = adapterPosition
++                    if (itemPosition != RecyclerView.NO_POSITION){
++                        deleteItem(itemPosition)
++                    }
++                }
++
++            }
++        }
++
++        private fun increaseQuantity(position: Int){
++            if (itemQuantities[position]<10){
++                itemQuantities[position]++
++                binding.cartItemQuantity.text = itemQuantities[position].toString()
++            }
++        }
++
++        private fun deceaseQuantity(position: Int){
++            if (itemQuantities[position]>1){
++                itemQuantities[position]--
++                binding.cartItemQuantity.text = itemQuantities[position].toString()
++            }
++        }
++
++        private fun deleteItem(position: Int){
++            CartItems.removeAt(position)
++            CartImage.removeAt(position)
++            CartItemPrice.removeAt(position)
++            notifyItemRemoved(position)
++            notifyItemRangeChanged(position, CartItems.size)
++        }
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\">\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\r\n        android:fullBackupContent=\"@xml/backup_rules\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/Theme.PharmaLink\"\r\n        tools:targetApi=\"31\">\r\n        <activity\r\n            android:name=\".RegisterActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".LoginActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".MainActivity\"\r\n            android:exported=\"false\" />\r\n        <activity\r\n            android:name=\".SplashScreen\"\r\n            android:exported=\"true\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 952586e4f116603621594e7fdbbf99abe2baef2f)
++++ b/app/src/main/AndroidManifest.xml	(date 1700419809441)
+@@ -19,10 +19,10 @@
+             android:name=".LoginActivity"
+             android:exported="false" />
+         <activity
+-            android:name=".MainActivity"
++            android:name=".SplashScreen"
+             android:exported="false" />
+         <activity
+-            android:name=".SplashScreen"
++            android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+Index: app/src/main/res/layout/cart_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/cart_item.xml b/app/src/main/res/layout/cart_item.xml
+new file mode 100644
+--- /dev/null	(date 1700420233501)
++++ b/app/src/main/res/layout/cart_item.xml	(date 1700420233501)
+@@ -0,0 +1,107 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content">
++
++    <androidx.cardview.widget.CardView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="8dp"
++        android:layout_marginEnd="16dp"
++        android:layout_marginBottom="8dp"
++        app:cardCornerRadius="15dp"
++        app:cardElevation="5dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <ImageView
++                android:id="@+id/cartImage"
++                android:layout_width="62dp"
++                android:layout_height="62dp"
++                android:layout_marginStart="16dp"
++                android:scaleType="centerCrop"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:id="@+id/cartDrugName"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="16dp"
++                android:text="TextView"
++                app:layout_constraintBottom_toTopOf="@+id/cartItemPrice"
++                app:layout_constraintStart_toEndOf="@+id/cartImage"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:id="@+id/cartItemPrice"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="16dp"
++                android:text="TextView"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/cartImage"
++                app:layout_constraintTop_toBottomOf="@+id/cartDrugName" />
++
++            <ImageButton
++                android:id="@+id/minusButton"
++                android:layout_width="24dp"
++                android:layout_height="24dp"
++                android:layout_marginEnd="8dp"
++                android:background="@android:color/transparent"
++                android:padding="2dp"
++                android:src="@drawable/minus"
++                app:layout_constraintBottom_toBottomOf="@+id/cartItemQuantity"
++                app:layout_constraintEnd_toStartOf="@+id/cartItemQuantity"
++                app:layout_constraintTop_toTopOf="@+id/cartItemQuantity"
++                app:layout_constraintVertical_bias="0.482" />
++
++            <TextView
++                android:id="@+id/cartItemQuantity"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginEnd="8dp"
++                android:text="1"
++                app:layout_constraintBottom_toBottomOf="@+id/plusButton"
++                app:layout_constraintEnd_toStartOf="@+id/plusButton"
++                app:layout_constraintTop_toTopOf="@+id/plusButton" />
++
++            <ImageButton
++                android:id="@+id/plusButton"
++                android:layout_width="24dp"
++                android:layout_height="24dp"
++                android:layout_marginTop="24dp"
++                android:layout_marginEnd="16dp"
++                android:background="@android:color/transparent"
++                android:padding="2dp"
++                android:src="@drawable/plus"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <ImageButton
++                android:id="@+id/deleteButton"
++                android:layout_width="33dp"
++                android:layout_height="32dp"
++                android:layout_marginTop="24dp"
++                android:layout_marginBottom="16dp"
++                android:background="@android:color/transparent"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintHorizontal_bias="0.37"
++                app:layout_constraintStart_toStartOf="@+id/minusButton"
++                app:layout_constraintTop_toBottomOf="@+id/plusButton"
++                app:srcCompat="@drawable/trash" />
++
++        </androidx.constraintlayout.widget.ConstraintLayout>
++    </androidx.cardview.widget.CardView>
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file

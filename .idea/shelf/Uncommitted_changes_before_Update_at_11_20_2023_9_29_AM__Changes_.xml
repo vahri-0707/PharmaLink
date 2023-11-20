@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_20_2023_9_29_AM_[Changes]" date="1700447420326" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_20_2023_9_29_AM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/20/2023 9:29 AM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/minus.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_20_2023_9_29_AM_[Changes]/minus.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/trash.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_20_2023_9_29_AM_[Changes]/trash.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="app/src/main/res/drawable/plus.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_20_2023_9_29_AM_[Changes]/plus.png" />
+  </binary>
+</changelist>
