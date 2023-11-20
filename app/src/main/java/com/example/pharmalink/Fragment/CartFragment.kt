@@ -5,10 +5,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pharmalink.R
 import com.example.pharmalink.adapter.CartAdapter
 import com.example.pharmalink.databinding.FragmentCartBinding
+
 
 class CartFragment : Fragment() {
     private lateinit var binding: FragmentCartBinding
@@ -34,7 +36,18 @@ class CartFragment : Fragment() {
         val adapter = CartAdapter(ArrayList(cartDrugName), ArrayList(cartItemPrice), ArrayList(cartImage))
         binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.cartRecyclerView.adapter = adapter
+
+        binding.buttonBackToHome.setOnClickListener {
+            // Handle the button click event
+            navigateToHome()
+        }
+
         return binding.root
+    }
+
+    private fun navigateToHome() {
+        // Use NavController to navigate back to the home screen
+        findNavController().navigate(R.id.homeFragment)
     }
 
     companion object {

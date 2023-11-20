@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/cardview_stroked_bottom.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="-2dp"> <!-- Adjust the top value as needed to control the width of the stroke -->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gray" />
+        </shape>
+    </item>
+    <item android:right="-2dp" android:left="-2dp" android:bottom="0.8dp"> <!-- Adjust the values to control the width of the stroke -->
+        <shape android:shape="rectangle">
+            <solid android:color="@color/background" />
+        </shape>
+    </item>
+</layer-list>

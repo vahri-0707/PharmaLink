@@ -10,13 +10,13 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu"
         app:itemPaddingBottom="25dp"
         app:itemPaddingTop="25dp"
-        android:background="@drawable/shape_nav"
+        android:background="@color/white"
         app:itemIconSize="28dp"
         app:itemIconTint="@color/textcolor"
         android:outlineSpotShadowColor="@color/primary"/>
@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="0dp"
-        android:layout_marginBottom="40dp"
+
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
