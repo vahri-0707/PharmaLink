@@ -1,0 +1,46 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:tools=\"http://schemas.android.com/tools\">\n\n    <application\n        android:allowBackup=\"true\"\n        android:dataExtractionRules=\"@xml/data_extraction_rules\"\n        android:fullBackupContent=\"@xml/backup_rules\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/Theme.PharmaLink\"\n        tools:targetApi=\"31\">\n        <activity\n            android:name=\".RegisterActivity\"\n            android:exported=\"false\" />\n        <activity\n            android:name=\".LoginActivity\"\n            android:exported=\"false\" />\n        <activity\n            android:name=\".MainActivity\"\n            android:exported=\"false\" />\n        <activity\n            android:name=\".SplashScreen\"\n            android:exported=\"true\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 952586e4f116603621594e7fdbbf99abe2baef2f)
++++ b/app/src/main/AndroidManifest.xml	(date 1700409179980)
+@@ -19,10 +19,10 @@
+             android:name=".LoginActivity"
+             android:exported="false" />
+         <activity
+-            android:name=".MainActivity"
++            android:name=".SplashScreen"
+             android:exported="false" />
+         <activity
+-            android:name=".SplashScreen"
++            android:name=".MainActivity"
+             android:exported="true">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><project version=\"4\">\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"jbr-17\" project-jdk-type=\"JavaSDK\">\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\n  </component>\n  <component name=\"ProjectType\">\n    <option name=\"id\" value=\"Android\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 952586e4f116603621594e7fdbbf99abe2baef2f)
++++ b/.idea/misc.xml	(date 1700428051976)
+@@ -6,4 +6,11 @@
+   <component name="ProjectType">
+     <option name="id" value="Android" />
+   </component>
++  <component name="VisualizationToolProject">
++    <option name="state">
++      <ProjectState>
++        <option name="scale" value="0.67" />
++      </ProjectState>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file

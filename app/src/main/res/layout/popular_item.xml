@@ -66,6 +66,7 @@
                 android:background="@drawable/shape_addcart"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
+                android:paddingTop="2dp"
                 android:text="Add to Cart "
                 android:textColor="@color/white"
                 android:textSize="12sp"

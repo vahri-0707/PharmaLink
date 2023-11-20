@@ -33,6 +33,10 @@
         <item name="cornerFamilyBottomLeft">rounded</item>
     </style>
 
+    <style name="NoElevationButton" parent="Widget.AppCompat.Button">
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
 
 
 </resources>
