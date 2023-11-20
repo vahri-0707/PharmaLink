@@ -1,0 +1,1279 @@
+Index: app/src/main/res/drawable/congrats.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/congrats.xml b/app/src/main/res/drawable/congrats.xml
+new file mode 100644
+--- /dev/null	(date 1700471052010)
++++ b/app/src/main/res/drawable/congrats.xml	(date 1700471052010)
+@@ -0,0 +1,39 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="25dp"
++    android:height="25dp"
++    android:viewportWidth="25"
++    android:viewportHeight="25">
++  <path
++      android:pathData="M12.216,12.648m-11.994,0a11.994,11.994 0,1 1,23.988 0a11.994,11.994 0,1 1,-23.988 0">
++    <aapt:attr name="android:fillColor">
++      <gradient 
++          android:startX="0.222"
++          android:startY="-0.819"
++          android:endX="27.914"
++          android:endY="3.472"
++          android:type="linear">
++        <item android:offset="0" android:color="#FF53E88B"/>
++        <item android:offset="1" android:color="#FF15BE77"/>
++      </gradient>
++    </aapt:attr>
++  </path>
++  <path
++      android:pathData="M11.325,15.892C11.071,15.892 10.817,15.783 10.671,15.564L8.636,12.948C8.346,12.585 8.418,12.076 8.782,11.786C9.145,11.495 9.654,11.568 9.945,11.931L11.325,13.711L14.377,9.751C14.668,9.387 15.177,9.315 15.54,9.605C15.904,9.896 15.976,10.405 15.686,10.768L11.979,15.564C11.798,15.746 11.58,15.892 11.325,15.892Z"
++      android:fillColor="#ffffff"/>
++  <path
++      android:pathData="M17.318,14.528m-0.448,0a0.448,0.448 0,1 1,0.895 0a0.448,0.448 0,1 1,-0.895 0"
++      android:fillColor="#ffffff"/>
++  <path
++      android:pathData="M5.593,9.605m-0.716,0a0.716,0.716 0,1 1,1.432 0a0.716,0.716 0,1 1,-1.432 0"
++      android:fillColor="#ffffff"/>
++  <path
++      android:pathData="M16.065,5.756m-0.269,0a0.269,0.269 0,1 1,0.537 0a0.269,0.269 0,1 1,-0.537 0"
++      android:fillColor="#ffffff"/>
++  <path
++      android:pathData="M8.636,18.377m-0.358,0a0.358,0.358 0,1 1,0.716 0a0.358,0.358 0,1 1,-0.716 0"
++      android:fillColor="#ffffff"/>
++  <path
++      android:pathData="M12.574,9.784m-0.179,0a0.179,0.179 0,1 1,0.358 0a0.179,0.179 0,1 1,-0.358 0"
++      android:fillColor="#ffffff"/>
++</vector>
+Index: app/src/main/res/drawable/arrow_left.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/arrow_left.xml b/app/src/main/res/drawable/arrow_left.xml
+new file mode 100644
+--- /dev/null	(date 1700455673510)
++++ b/app/src/main/res/drawable/arrow_left.xml	(date 1700455673510)
+@@ -0,0 +1,13 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="22dp"
++    android:height="22dp"
++    android:viewportWidth="22"
++    android:viewportHeight="22">
++  <path
++      android:pathData="M11,7L7,11M7,11L11,15M7,11H15M21,11C21,16.523 16.523,21 11,21C5.477,21 1,16.523 1,11C1,5.477 5.477,1 11,1C16.523,1 21,5.477 21,11Z"
++      android:strokeLineJoin="round"
++      android:strokeWidth="2"
++      android:fillColor="#00000000"
++      android:strokeColor="@color/iconColor"
++      android:strokeLineCap="round"/>
++</vector>
+Index: app/src/main/res/drawable/addtocartshape.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/addtocartshape.xml b/app/src/main/res/drawable/addtocartshape.xml
+new file mode 100644
+--- /dev/null	(date 1700463838991)
++++ b/app/src/main/res/drawable/addtocartshape.xml	(date 1700463838991)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<corners android:radius="5dp"/>
++    <gradient android:startColor="@color/startColor"
++        android:endColor="@color/startColor" android:angle="-45"/>
++</shape>
+\ No newline at end of file
+Index: app/src/main/res/layout/buy_again_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/buy_again_item.xml b/app/src/main/res/layout/buy_again_item.xml
+new file mode 100644
+--- /dev/null	(date 1700465144075)
++++ b/app/src/main/res/layout/buy_again_item.xml	(date 1700465144075)
+@@ -0,0 +1,80 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    xmlns:app="http://schemas.android.com/apk/res-auto">
++
++    <androidx.cardview.widget.CardView
++        android:id="@+id/cardView2"
++        android:layout_width="match_parent"
++        android:layout_height="100dp"
++        android:layout_marginStart="8dp"
++        android:layout_marginTop="8dp"
++        android:layout_marginBottom="8dp"
++        android:layout_marginEnd="8dp"
++        app:cardCornerRadius="15dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <ImageView
++                android:id="@+id/buyAgainDrugImage"
++                android:layout_width="62dp"
++                android:layout_height="62dp"
++                android:layout_marginStart="8dp"
++                android:layout_marginTop="8dp"
++                android:layout_marginBottom="8dp"
++                android:src="@drawable/medicine_paracetamol"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:id="@+id/buyAgainDrugName"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="16dp"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Paracetamol"
++                android:textSize="16sp"
++                android:textColor="@color/black"
++                app:layout_constraintBottom_toTopOf="@+id/buyAgainDrugPrice"
++                app:layout_constraintStart_toEndOf="@+id/buyAgainDrugImage"
++                app:layout_constraintTop_toTopOf="parent" />
++
++            <TextView
++                android:id="@+id/buyAgainDrugPrice"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Rp. 5000"
++                android:textSize="15sp"
++                android:textColor="@color/textcolor"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintStart_toStartOf="@+id/buyAgainDrugName"
++                app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugName" />
++
++            <androidx.appcompat.widget.AppCompatButton
++                android:id="@+id/buyAgainDrugButton"
++                android:layout_width="85dp"
++                android:layout_height="30dp"
++                android:layout_marginEnd="32dp"
++                android:background="@drawable/addtocartshape"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Buy Again"
++                android:textAllCaps="false"
++                android:textColor="@color/white"
++                android:textSize="14sp"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintTop_toTopOf="parent" />
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++    </androidx.cardview.widget.CardView>
++
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/values/colors.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<resources>\r\n    <color name=\"black\">#FF000000</color>\r\n    <color name=\"white\">#FFFFFFFF</color>\r\n    <color name=\"textcolor\">#FF3A3C4E</color>\r\n    <color name=\"background\">#FFF9F9F9</color>\r\n    <color name=\"gray\">#FFA6A8AD</color>\r\n    <color name=\"primary\">#FF56BED1</color>\r\n    <color name=\"red\">#FFBE3144</color>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/colors.xml b/app/src/main/res/values/colors.xml
+--- a/app/src/main/res/values/colors.xml	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/res/values/colors.xml	(date 1700471650569)
+@@ -7,4 +7,8 @@
+     <color name="gray">#FFA6A8AD</color>
+     <color name="primary">#FF56BED1</color>
+     <color name="red">#FFBE3144</color>
++    <color name="iconColor">#FEAD1D</color>
++    <color name="startColor">#4CAF50</color>
++
++
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">PharmaLink</string>\r\n    <!-- TODO: Remove or change this placeholder text -->\r\n    <string name=\"hello_blank_fragment\">Hello blank fragment</string>\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/res/values/strings.xml	(date 1700469499066)
+@@ -2,4 +2,5 @@
+     <string name="app_name">PharmaLink</string>
+     <!-- TODO: Remove or change this placeholder text -->
+     <string name="hello_blank_fragment">Hello blank fragment</string>
++    <string name="save_information">Save Information</string>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_history.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Fragment.HistoryFragment\">\r\n\r\n    <!-- TODO: Update blank fragment layout -->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:text=\"history\" />\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_history.xml b/app/src/main/res/layout/fragment_history.xml
+--- a/app/src/main/res/layout/fragment_history.xml	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/res/layout/fragment_history.xml	(date 1700465856320)
+@@ -1,14 +1,114 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     tools:context=".Fragment.HistoryFragment">
+ 
+-    <!-- TODO: Update blank fragment layout -->
+-    <TextView
+-        android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:text="history" />
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++
++        <TextView
++            android:id="@+id/textView12"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="8dp"
++            android:layout_marginTop="16dp"
++            android:fontFamily="@font/poppins_medium"
++            android:text="Recent Buy"
++            android:textColor="@color/black"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <androidx.cardview.widget.CardView
++            android:id="@+id/cardView2"
++            android:layout_width="match_parent"
++            android:layout_height="100dp"
++            android:layout_marginStart="8dp"
++            android:layout_marginTop="8dp"
++            android:layout_marginEnd="8dp"
++            app:cardCornerRadius="15dp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@id/textView12">
++
++            <androidx.constraintlayout.widget.ConstraintLayout
++                android:layout_width="match_parent"
++                android:layout_height="match_parent">
++
++                <ImageView
++                    android:id="@+id/buyAgainDrugImage"
++                    android:layout_width="62dp"
++                    android:layout_height="62dp"
++                    android:layout_marginStart="8dp"
++                    android:layout_marginTop="8dp"
++                    android:layout_marginBottom="8dp"
++                    android:src="@drawable/medicine_paracetamol"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintStart_toStartOf="parent"
++                    app:layout_constraintTop_toTopOf="parent" />
++
++                <TextView
++                    android:id="@+id/buyAgainDrugName"
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:layout_marginStart="16dp"
++                    android:fontFamily="@font/poppins_medium"
++                    android:text="Paracetamol"
++                    android:textColor="@color/black"
++                    app:layout_constraintBottom_toTopOf="@+id/buyAgainDrugPrice"
++                    app:layout_constraintStart_toEndOf="@+id/buyAgainDrugImage"
++                    app:layout_constraintTop_toTopOf="parent" />
++
++                <TextView
++                    android:id="@+id/buyAgainDrugPrice"
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    android:fontFamily="@font/poppins_medium"
++                    android:text="Rp. 5000"
++                    android:textColor="@color/textcolor"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintStart_toStartOf="@+id/buyAgainDrugName"
++                    app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugName" />
++
++                <androidx.cardview.widget.CardView
++                    android:layout_width="40dp"
++                    android:layout_height="40dp"
++                    android:layout_marginEnd="32dp"
++                    app:cardBackgroundColor="#4CAF50"
++                    app:cardCornerRadius="20dp"
++                    app:layout_constraintBottom_toBottomOf="parent"
++                    app:layout_constraintEnd_toEndOf="parent"
++                    app:layout_constraintTop_toTopOf="parent" />
++            </androidx.constraintlayout.widget.ConstraintLayout>
++
++        </androidx.cardview.widget.CardView>
++
++        <TextView
++            android:id="@+id/textView15"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginStart="8dp"
++            android:layout_marginTop="16dp"
++            android:fontFamily="@font/poppins_medium"
++            android:text="Recent Buy"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/cardView2"
++            android:textColor="@color/black" />
++
++        <androidx.recyclerview.widget.RecyclerView
++            android:id="@+id/BuyAgainRecyclerView"
++            android:layout_width="match_parent"
++            android:layout_height="0dp"
++            android:layout_marginTop="16dp"
++            app:layout_constraintBottom_toBottomOf="parent"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            tools:listitem="@layout/buy_again_item"
++            app:layout_constraintTop_toBottomOf="@+id/textView15" />
++
++    </androidx.constraintlayout.widget.ConstraintLayout>
+ 
+ </FrameLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_home.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:background=\"@color/background\"\r\n    tools:context=\".Fragment.HomeFragment\">\r\n\r\n    <ScrollView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n\r\n        <androidx.constraintlayout.widget.ConstraintLayout\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"wrap_content\">\r\n\r\n            <androidx.constraintlayout.widget.ConstraintLayout\r\n                android:id=\"@+id/constraintLayout\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"180dp\"\r\n                android:background=\"@drawable/shape_home\"\r\n                app:layout_constraintEnd_toEndOf=\"parent\"\r\n                app:layout_constraintStart_toStartOf=\"parent\"\r\n                app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n                <TextView\r\n                    android:id=\"@+id/textView9\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginStart=\"24dp\"\r\n                    android:layout_marginTop=\"28dp\"\r\n                    android:fontFamily=\"@font/poppins_light\"\r\n                    android:text=\"Hello,\"\r\n                    android:textColor=\"@color/white\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"\r\n                    app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n                <TextView\r\n                    android:id=\"@+id/textView10\"\r\n                    android:layout_width=\"wrap_content\"\r\n                    android:layout_height=\"wrap_content\"\r\n                    android:layout_marginTop=\"-5dp\"\r\n                    android:fontFamily=\"@font/poppins_semibold\"\r\n                    android:text=\"Vahri Maulana\"\r\n                    android:textColor=\"@color/white\"\r\n                    android:textSize=\"20sp\"\r\n                    app:layout_constraintStart_toStartOf=\"@+id/textView9\"\r\n                    app:layout_constraintTop_toBottomOf=\"@+id/textView9\" />\r\n\r\n                <androidx.appcompat.widget.SearchView\r\n                    android:id=\"@+id/searchView\"\r\n                    android:layout_width=\"280dp\"\r\n                    android:layout_height=\"48dp\"\r\n                    android:layout_marginLeft=\"24dp\"\r\n                    android:layout_marginTop=\"-15dp\"\r\n                    android:background=\"@drawable/shape_search\"\r\n                    android:paddingLeft=\"-5dp\"\r\n                    app:iconifiedByDefault=\"false\"\r\n                    app:layout_constraintBottom_toBottomOf=\"parent\"\r\n                    app:layout_constraintStart_toStartOf=\"parent\"\r\n                    app:layout_constraintTop_toBottomOf=\"@+id/textView10\"\r\n                    app:queryBackground=\"@color/white\"\r\n                    app:queryHint=\"Search\"\r\n                    app:searchHintIcon=\"@color/primary\"\r\n                    app:searchIcon=\"@drawable/ic_search_24\"></androidx.appcompat.widget.SearchView>\r\n\r\n                <androidx.constraintlayout.widget.ConstraintLayout\r\n                    android:layout_width=\"48dp\"\r\n                    android:layout_height=\"48dp\"\r\n                    android:layout_marginRight=\"24dp\"\r\n                    android:background=\"@drawable/shape_search\"\r\n                    app:layout_constraintBottom_toBottomOf=\"@+id/searchView\"\r\n                    app:layout_constraintEnd_toEndOf=\"parent\"\r\n                    app:layout_constraintTop_toTopOf=\"@+id/searchView\">\r\n\r\n                    <ImageView\r\n                        android:id=\"@+id/imageView\"\r\n                        android:layout_width=\"20dp\"\r\n                        android:layout_height=\"20dp\"\r\n                        android:src=\"@drawable/ic_notification\"\r\n                        app:layout_constraintBottom_toBottomOf=\"parent\"\r\n                        app:layout_constraintEnd_toEndOf=\"parent\"\r\n                        app:layout_constraintStart_toStartOf=\"parent\"\r\n                        app:layout_constraintTop_toTopOf=\"parent\" />\r\n                </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n            </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView11\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:fontFamily=\"@font/poppins_regular\"\r\n                android:paddingLeft=\"24dp\"\r\n                android:paddingTop=\"18dp\"\r\n                android:paddingBottom=\"18dp\"\r\n                android:text=\"#SpecialForYou\"\r\n                android:textColor=\"@color/textcolor\"\r\n                android:textSize=\"18sp\"\r\n                app:layout_constraintStart_toStartOf=\"parent\"\r\n                app:layout_constraintTop_toBottomOf=\"@+id/constraintLayout\" />\r\n\r\n            <androidx.cardview.widget.CardView\r\n                android:id=\"@+id/cardView\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"160dp\"\r\n                android:layout_marginHorizontal=\"24dp\"\r\n                app:cardCornerRadius=\"15dp\"\r\n                app:layout_constraintEnd_toEndOf=\"parent\"\r\n                app:layout_constraintStart_toStartOf=\"parent\"\r\n                app:layout_constraintTop_toBottomOf=\"@+id/textView11\">\r\n\r\n                <com.denzcoskun.imageslider.ImageSlider\r\n                    android:id=\"@+id/image_slider\"\r\n                    android:layout_width=\"match_parent\"\r\n                    android:layout_height=\"match_parent\"\r\n                    app:iss_auto_cycle=\"true\"\r\n                    app:iss_delay=\"2000\"\r\n                    app:iss_no_dots=\"true\"\r\n                    app:iss_period=\"2000\"\r\n                    app:iss_text_align=\"CENTER\" />\r\n            </androidx.cardview.widget.CardView>\r\n\r\n            <androidx.recyclerview.widget.RecyclerView\r\n                android:id=\"@+id/PopularRecyclerView\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginHorizontal=\"24dp\"\r\n                android:layout_marginStart=\"24dp\"\r\n                android:layout_marginBottom=\"50dp\"\r\n                app:layoutManager=\"androidx.recyclerview.widget.LinearLayoutManager\"\r\n                app:layout_constraintBottom_toBottomOf=\"parent\"\r\n                app:layout_constraintEnd_toEndOf=\"parent\"\r\n                app:layout_constraintHorizontal_bias=\"0.0\"\r\n                app:layout_constraintStart_toStartOf=\"parent\"\r\n                app:layout_constraintTop_toBottomOf=\"@+id/textView2\"\r\n                app:layout_constraintVertical_bias=\"0.023\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView2\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginLeft=\"24dp\"\r\n                android:fontFamily=\"@font/poppins_regular\"\r\n                android:textColor=\"@color/textcolor\"\r\n                android:layout_marginTop=\"24dp\"\r\n                android:textSize=\"16sp\"\r\n                android:paddingBottom=\"8dp\"\r\n                android:text=\"Best Seller\"\r\n                app:layout_constraintStart_toStartOf=\"parent\"\r\n                app:layout_constraintTop_toBottomOf=\"@+id/cardView\" />\r\n\r\n            <TextView\r\n                android:id=\"@+id/textView3\"\r\n                android:layout_width=\"wrap_content\"\r\n                android:layout_height=\"wrap_content\"\r\n                android:layout_marginRight=\"24dp\"\r\n                android:layout_marginTop=\"27dp\"\r\n                android:fontFamily=\"@font/poppins_medium\"\r\n                android:gravity=\"center\"\r\n                android:text=\"See All\"\r\n                android:textColor=\"@color/primary\"\r\n                android:textSize=\"13sp\"\r\n                app:layout_constraintEnd_toEndOf=\"parent\"\r\n                app:layout_constraintTop_toBottomOf=\"@+id/cardView\" />\r\n\r\n\r\n        </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n    </ScrollView>\r\n\r\n\r\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_home.xml b/app/src/main/res/layout/fragment_home.xml
+--- a/app/src/main/res/layout/fragment_home.xml	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/res/layout/fragment_home.xml	(date 1700472696216)
+@@ -76,7 +76,7 @@
+                     app:layout_constraintTop_toTopOf="@+id/searchView">
+ 
+                     <ImageView
+-                        android:id="@+id/imageView"
++                        android:id="@+id/notificationButton"
+                         android:layout_width="20dp"
+                         android:layout_height="20dp"
+                         android:src="@drawable/ic_notification"
+@@ -153,7 +153,7 @@
+                 app:layout_constraintTop_toBottomOf="@+id/cardView" />
+ 
+             <TextView
+-                android:id="@+id/textView3"
++                android:id="@+id/viewAllBarang"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginRight="24dp"
+Index: app/src/main/res/layout/fragment_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Fragment.ProfileFragment\">\r\n\r\n    <!-- TODO: Update blank fragment layout -->\r\n    <TextView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:text=\"profile\" />\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_profile.xml b/app/src/main/res/layout/fragment_profile.xml
+--- a/app/src/main/res/layout/fragment_profile.xml	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/res/layout/fragment_profile.xml	(date 1700474206723)
+@@ -3,12 +3,159 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
++    android:orientation="vertical"
++    android:paddingStart="6dp"
++    android:backgroundTint="@color/white"
++    android:paddingEnd="6dp"
+     tools:context=".Fragment.ProfileFragment">
++    <LinearLayout
++        android:layout_width="match_parent"
++        android:orientation="vertical"
++        android:layout_height="wrap_content">
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="56dp"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="10dp"
++            android:layout_marginRight="10dp"
++            android:background="@drawable/profileedittextshape"
++            android:elevation="2dp"
++            android:gravity="center_vertical"
++            android:orientation="horizontal">
++
++            <TextView
++                android:layout_width="30dp"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="8dp"
++                android:layout_weight="1"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Name"
++                android:textColor="@color/black"
++                android:textSize="20sp" />
++
++            <EditText
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_weight="1"
++                android:background="@android:color/transparent"
++                android:ems="10"
++                android:inputType="text"
++                android:text="ParaPriya" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="wrap_content"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="10dp"
++            android:layout_marginRight="10dp"
++            android:background="@drawable/profileedittextshape"
++            android:elevation="2dp"
++            android:gravity="center_vertical"
++            android:orientation="horizontal">
++
++            <TextView
++                android:layout_width="30dp"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="8dp"
++                android:layout_weight="1"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Address"
++                android:textColor="@color/black"
++                android:textSize="20sp" />
++
++            <EditText
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginTop="5dp"
++                android:layout_marginBottom="5dp"
++                android:layout_weight="1"
++                android:background="@android:color/transparent"
++                android:ems="10"
++                android:inputType="textMultiLine"
++                android:text="aku tinggal di universitas islam indonesia jalan kaliurang km 14.5, sleman jogjakarta" />
++        </LinearLayout>
+ 
+-    <!-- TODO: Update blank fragment layout -->
+-    <TextView
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="56dp"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="10dp"
++            android:layout_marginRight="10dp"
++            android:background="@drawable/profileedittextshape"
++            android:elevation="2dp"
++            android:gravity="center_vertical"
++            android:orientation="horizontal">
++
++            <TextView
++                android:layout_width="30dp"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="8dp"
++                android:layout_weight="1"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Email"
++                android:textColor="@color/black"
++                android:textSize="20sp" />
++
++            <EditText
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_weight="1"
++                android:background="@android:color/transparent"
++                android:ems="10"
++                android:inputType="textEmailAddress"
++                android:text="ParaPriya@gmail.com" />
++        </LinearLayout>
++
++        <LinearLayout
++            android:layout_width="match_parent"
++            android:layout_height="56dp"
++            android:layout_marginLeft="10dp"
++            android:layout_marginTop="10dp"
++            android:layout_marginRight="10dp"
++            android:layout_marginBottom="10dp"
++            android:background="@drawable/profileedittextshape"
++            android:elevation="2dp"
++            android:gravity="center_vertical"
++            android:orientation="horizontal">
++
++            <TextView
++                android:layout_width="30dp"
++                android:layout_height="wrap_content"
++                android:layout_marginLeft="8dp"
++                android:layout_weight="1"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Phone"
++                android:textColor="@color/black"
++                android:textSize="20sp" />
++
++            <EditText
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_weight="1"
++                android:background="@android:color/transparent"
++                android:ems="10"
++                android:inputType="phone"
++                android:text="12345678" />
++        </LinearLayout>
++        
++</LinearLayout>
++
++    <androidx.appcompat.widget.AppCompatButton
++        android:id="@+id/button2"
++        android:elevation="5dp"
++        android:background="@drawable/proceedbuttonshape"
+         android:layout_width="match_parent"
+-        android:layout_height="match_parent"
+-        android:text="profile" />
++        android:layout_marginBottom="32dp"
++        android:layout_marginRight="8dp"
++        android:layout_marginLeft="8dp"
++        android:textAllCaps="false"
++        android:layout_height="56dp"
++        android:layout_gravity="bottom"
++        android:textColor="@color/textcolor"
++        android:textSize="20sp"
++        android:fontFamily="@font/poppins_medium"
++        android:text="@string/save_information" />
+ 
+-</FrameLayout>
+\ No newline at end of file
++</FrameLayout>
+Index: app/src/main/java/com/example/pharmalink/Fragment/HistoryFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.pharmalink.Fragment\r\n\r\nimport android.os.Bundle\r\nimport androidx.fragment.app.Fragment\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport com.example.pharmalink.R\r\n\r\n// TODO: Rename parameter arguments, choose names that match\r\n// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER\r\nprivate const val ARG_PARAM1 = \"param1\"\r\nprivate const val ARG_PARAM2 = \"param2\"\r\n\r\n/**\r\n * A simple [Fragment] subclass.\r\n * Use the [HistoryFragment.newInstance] factory method to\r\n * create an instance of this fragment.\r\n */\r\nclass HistoryFragment : Fragment() {\r\n    // TODO: Rename and change types of parameters\r\n    private var param1: String? = null\r\n    private var param2: String? = null\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        arguments?.let {\r\n            param1 = it.getString(ARG_PARAM1)\r\n            param2 = it.getString(ARG_PARAM2)\r\n        }\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n        // Inflate the layout for this fragment\r\n        return inflater.inflate(R.layout.fragment_history, container, false)\r\n    }\r\n\r\n    companion object {\r\n        /**\r\n         * Use this factory method to create a new instance of\r\n         * this fragment using the provided parameters.\r\n         *\r\n         * @param param1 Parameter 1.\r\n         * @param param2 Parameter 2.\r\n         * @return A new instance of fragment HistoryFragment.\r\n         */\r\n        // TODO: Rename and change types and number of parameters\r\n        @JvmStatic\r\n        fun newInstance(param1: String, param2: String) =\r\n            HistoryFragment().apply {\r\n                arguments = Bundle().apply {\r\n                    putString(ARG_PARAM1, param1)\r\n                    putString(ARG_PARAM2, param2)\r\n                }\r\n            }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/Fragment/HistoryFragment.kt b/app/src/main/java/com/example/pharmalink/Fragment/HistoryFragment.kt
+--- a/app/src/main/java/com/example/pharmalink/Fragment/HistoryFragment.kt	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/java/com/example/pharmalink/Fragment/HistoryFragment.kt	(date 1700465985695)
+@@ -5,49 +5,49 @@
+ import android.view.LayoutInflater
+ import android.view.View
+ import android.view.ViewGroup
++import androidx.recyclerview.widget.LinearLayoutManager
+ import com.example.pharmalink.R
++import com.example.pharmalink.adapter.BuyAgainAdapter
++import com.example.pharmalink.databinding.FragmentHistoryBinding
+ 
+ // TODO: Rename parameter arguments, choose names that match
+ // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+ private const val ARG_PARAM1 = "param1"
+ private const val ARG_PARAM2 = "param2"
+ 
+-/**
+- * A simple [Fragment] subclass.
+- * Use the [HistoryFragment.newInstance] factory method to
+- * create an instance of this fragment.
+- */
+ class HistoryFragment : Fragment() {
+-    // TODO: Rename and change types of parameters
+-    private var param1: String? = null
+-    private var param2: String? = null
+-
++    private lateinit var binding: FragmentHistoryBinding
++    private lateinit var buyAgainAdapter: BuyAgainAdapter
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+-        arguments?.let {
+-            param1 = it.getString(ARG_PARAM1)
+-            param2 = it.getString(ARG_PARAM2)
+-        }
++
+     }
+ 
+     override fun onCreateView(
+         inflater: LayoutInflater, container: ViewGroup?,
+         savedInstanceState: Bundle?
+     ): View? {
++        binding=FragmentHistoryBinding.inflate(layoutInflater,container,false)
+         // Inflate the layout for this fragment
+-        return inflater.inflate(R.layout.fragment_history, container, false)
++        setupRecyclerView()
++        return binding.root
++    }
++
++    private fun setupRecyclerView(){
++        val buyAgainDrugName = listOf("Paracetamol","Procold","Bodrex","Amoxcilin")
++        val buyAgainDrugPrice = listOf("Rp. 5000", "Rp. 7000", "Rp. 5000", "Rp. 15000")
++        val buyAgainDrugImage = listOf(
++            R.drawable.medicine_paracetamol,
++            R.drawable.medicine_procold,
++            R.drawable.medicine_bodrex,
++            R.drawable.medicine_amoxiline)
++        buyAgainAdapter = BuyAgainAdapter(buyAgainDrugName,buyAgainDrugPrice,buyAgainDrugImage)
++        binding.BuyAgainRecyclerView.adapter = buyAgainAdapter
++        binding.BuyAgainRecyclerView.layoutManager = LinearLayoutManager(requireContext())
++
+     }
+ 
+     companion object {
+-        /**
+-         * Use this factory method to create a new instance of
+-         * this fragment using the provided parameters.
+-         *
+-         * @param param1 Parameter 1.
+-         * @param param2 Parameter 2.
+-         * @return A new instance of fragment HistoryFragment.
+-         */
+-        // TODO: Rename and change types and number of parameters
+         @JvmStatic
+         fun newInstance(param1: String, param2: String) =
+             HistoryFragment().apply {
+Index: app/src/main/java/com/example/pharmalink/Fragment/HomeFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.pharmalink.Fragment\r\n\r\nimport android.os.Bundle\r\nimport android.view.LayoutInflater\r\nimport android.view.View\r\nimport android.view.ViewGroup\r\nimport android.widget.Toast\r\nimport androidx.fragment.app.Fragment\r\nimport androidx.recyclerview.widget.LinearLayoutManager\r\nimport com.denzcoskun.imageslider.constants.ScaleTypes\r\nimport com.denzcoskun.imageslider.interfaces.ItemClickListener\r\nimport com.denzcoskun.imageslider.models.SlideModel\r\nimport com.example.pharmalink.R\r\nimport com.example.pharmalink.adapter.PopularAdapter\r\nimport com.example.pharmalink.databinding.FragmentHomeBinding\r\n\r\n\r\nclass HomeFragment : Fragment() {\r\n    private lateinit var binding: FragmentHomeBinding\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n\r\n    }\r\n\r\n    override fun onCreateView(\r\n        inflater: LayoutInflater, container: ViewGroup?,\r\n        savedInstanceState: Bundle?\r\n    ): View? {\r\n        // Inflate the layout for this fragment\r\n        binding = FragmentHomeBinding.inflate(inflater,container,false)\r\n        return binding.root\r\n    }\r\n\r\n    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {\r\n        super.onViewCreated(view, savedInstanceState)\r\n        val imageList = ArrayList<SlideModel>()\r\n        imageList.add(SlideModel(R.drawable.banner_1, ScaleTypes.FIT))\r\n        imageList.add(SlideModel(R.drawable.banner_2, ScaleTypes.FIT))\r\n        imageList.add(SlideModel(R.drawable.banner_3, ScaleTypes.FIT))\r\n\r\n        val imageSlider = binding.imageSlider\r\n        imageSlider.setImageList(imageList)\r\n        imageSlider.setImageList(imageList, ScaleTypes.FIT)\r\n\r\n        imageSlider.setItemClickListener(object :ItemClickListener {\r\n            override fun doubleClick(position: Int) {\r\n                TODO(\"Not yet implemented\")\r\n            }\r\n\r\n            override fun onItemSelected(position: Int) {\r\n                val itemPosition = imageList[position]\r\n                val itemMessage = \"Selected Image $position\"\r\n                Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()\r\n            }\r\n        })\r\n        val namaBarang = listOf(\"Paracetamol\",\"Procold\",\"Bodrex\",\"Amoxcilin\")\r\n        val Price = listOf(\"Rp. 5000\", \"Rp. 7000\", \"Rp. 5000\", \"Rp. 15000\")\r\n        val fotoBarangTerlarisImages = listOf(R.drawable.medicine_paracetamol, R.drawable.medicine_procold, R.drawable.medicine_bodrex, R.drawable.medicine_amoxiline)\r\n\r\n        val adapter = PopularAdapter(namaBarang, Price, fotoBarangTerlarisImages)\r\n\r\n\r\n        // Use a GridLayoutManager with 2 columns\r\n        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)\r\n        binding.PopularRecyclerView.layoutManager = layoutManager\r\n\r\n        binding.PopularRecyclerView.adapter = adapter\r\n    }\r\n\r\n    companion object {\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/Fragment/HomeFragment.kt b/app/src/main/java/com/example/pharmalink/Fragment/HomeFragment.kt
+--- a/app/src/main/java/com/example/pharmalink/Fragment/HomeFragment.kt	(revision 7e9b4589be35c08ca6615cddbf783be15c76878a)
++++ b/app/src/main/java/com/example/pharmalink/Fragment/HomeFragment.kt	(date 1700473772744)
+@@ -1,21 +1,26 @@
+ package com.example.pharmalink.Fragment
+ 
+ import android.os.Bundle
++import android.os.TestLooperManager
+ import android.view.LayoutInflater
+ import android.view.View
+ import android.view.ViewGroup
+ import android.widget.Toast
+ import androidx.fragment.app.Fragment
++import androidx.fragment.app.FragmentManager
+ import androidx.recyclerview.widget.LinearLayoutManager
+ import com.denzcoskun.imageslider.constants.ScaleTypes
+ import com.denzcoskun.imageslider.interfaces.ItemClickListener
+ import com.denzcoskun.imageslider.models.SlideModel
++import com.example.pharmalink.MenuBootomSheetFragment
++import com.example.pharmalink.Notification_Bottom_Fragmet
+ import com.example.pharmalink.R
+ import com.example.pharmalink.adapter.PopularAdapter
+ import com.example.pharmalink.databinding.FragmentHomeBinding
+ 
+ 
+ class HomeFragment : Fragment() {
++
+     private lateinit var binding: FragmentHomeBinding
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+@@ -28,7 +33,16 @@
+         savedInstanceState: Bundle?
+     ): View? {
+         // Inflate the layout for this fragment
++        binding = FragmentHomeBinding.inflate(layoutInflater)
+         binding = FragmentHomeBinding.inflate(inflater,container,false)
++        binding.notificationButton.setOnClickListener{
++            val bottomSheetDialog = Notification_Bottom_Fragmet()
++            bottomSheetDialog.show(parentFragmentManager,"Test")
++        }
++        binding.viewAllBarang.setOnClickListener{
++            val bottomSheetDialog = MenuBootomSheetFragment()
++            bottomSheetDialog.show(parentFragmentManager,"Test")
++        }
+         return binding.root
+     }
+ 
+@@ -66,7 +80,9 @@
+         binding.PopularRecyclerView.layoutManager = layoutManager
+ 
+         binding.PopularRecyclerView.adapter = adapter
+-    }
++
++
++        }
+ 
+     companion object {
+     }
+Index: app/src/main/res/drawable/sademoji.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/sademoji.xml b/app/src/main/res/drawable/sademoji.xml
+new file mode 100644
+--- /dev/null	(date 1700471014215)
++++ b/app/src/main/res/drawable/sademoji.xml	(date 1700471014215)
+@@ -0,0 +1,31 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:aapt="http://schemas.android.com/aapt"
++    android:width="26dp"
++    android:height="26dp"
++    android:viewportWidth="26"
++    android:viewportHeight="26">
++  <path
++      android:pathData="M26,13C26,20.18 20.18,26 13,26C5.821,26 0,20.18 0,13C0,5.82 5.821,-0 13,-0C20.18,-0 26,5.82 26,13Z">
++    <aapt:attr name="android:fillColor">
++      <gradient 
++          android:startX="24.26"
++          android:startY="6.499"
++          android:endX="1.74"
++          android:endY="19.501"
++          android:type="linear">
++        <item android:offset="0" android:color="#FFF3B445"/>
++        <item android:offset="0.361" android:color="#FFF3B445"/>
++        <item android:offset="1" android:color="#FFF7954B"/>
++      </gradient>
++    </aapt:attr>
++  </path>
++  <path
++      android:pathData="M5.112,13.476C5.135,13.523 5.278,13.811 5.63,14.101C5.805,14.246 6.033,14.389 6.317,14.494C6.6,14.6 6.938,14.666 7.325,14.666C7.71,14.666 8.043,14.6 8.32,14.491C8.736,14.328 9.018,14.074 9.188,13.859C9.36,13.643 9.427,13.466 9.442,13.426C9.541,13.148 9.397,12.843 9.119,12.744C8.842,12.644 8.536,12.789 8.437,13.066L8.703,13.162L8.441,13.055L8.437,13.066L8.703,13.162L8.441,13.055L8.439,13.059C8.427,13.088 8.356,13.225 8.197,13.347C8.036,13.469 7.789,13.596 7.325,13.599C7.058,13.598 6.853,13.554 6.689,13.493C6.444,13.402 6.287,13.271 6.189,13.165C6.141,13.113 6.108,13.066 6.09,13.038L6.073,13.01L6.071,13.008L5.88,13.11L6.076,13.017L6.071,13.008L5.88,13.11L6.076,13.017C5.949,12.75 5.63,12.637 5.364,12.764C5.098,12.891 4.985,13.21 5.112,13.476Z"
++      android:fillColor="#3C3C44"/>
++  <path
++      android:pathData="M16.258,13.476C16.281,13.523 16.424,13.811 16.775,14.101C16.951,14.246 17.179,14.389 17.463,14.494C17.746,14.6 18.084,14.666 18.471,14.666C18.856,14.666 19.188,14.6 19.465,14.491C19.882,14.328 20.163,14.074 20.334,13.859C20.506,13.643 20.573,13.466 20.588,13.426C20.687,13.148 20.542,12.843 20.265,12.744C19.987,12.644 19.682,12.789 19.583,13.066L19.849,13.162L19.587,13.055L19.583,13.066L19.849,13.162L19.587,13.055L19.585,13.059C19.572,13.088 19.502,13.225 19.343,13.347C19.182,13.469 18.934,13.596 18.471,13.599C18.204,13.598 17.998,13.554 17.834,13.493C17.589,13.402 17.433,13.271 17.335,13.165C17.286,13.112 17.254,13.066 17.235,13.038L17.218,13.01L17.217,13.008L17.025,13.11L17.221,13.016L17.217,13.008L17.025,13.11L17.221,13.016C17.094,12.75 16.775,12.637 16.51,12.764C16.244,12.891 16.131,13.21 16.258,13.476Z"
++      android:fillColor="#3C3C44"/>
++  <path
++      android:pathData="M17.297,19.873C17.275,19.82 17.035,19.25 16.367,18.679C16.033,18.394 15.592,18.112 15.029,17.904C14.466,17.695 13.782,17.561 12.967,17.562C12.151,17.561 11.471,17.695 10.913,17.905C10.074,18.218 9.52,18.7 9.181,19.107C8.842,19.514 8.713,19.846 8.698,19.888C8.594,20.164 8.734,20.471 9.011,20.574C9.287,20.678 9.594,20.538 9.697,20.261L9.463,20.174L9.695,20.267L9.697,20.261L9.463,20.174L9.695,20.267C9.696,20.263 9.865,19.849 10.344,19.447C10.584,19.245 10.902,19.043 11.328,18.889C11.754,18.736 12.289,18.629 12.967,18.629C13.666,18.629 14.219,18.742 14.659,18.905C15.318,19.149 15.731,19.506 15.984,19.798C16.111,19.944 16.196,20.073 16.248,20.161C16.274,20.205 16.291,20.239 16.301,20.259L16.31,20.279L16.311,20.281L16.597,20.159L16.309,20.276L16.311,20.281L16.597,20.159L16.309,20.276C16.42,20.549 16.732,20.68 17.005,20.569C17.278,20.457 17.409,20.146 17.297,19.873Z"
++      android:fillColor="#3C3C44"/>
++</vector>
+Index: app/src/main/res/layout/menu_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/menu_item.xml b/app/src/main/res/layout/menu_item.xml
+new file mode 100644
+--- /dev/null	(date 1700451881092)
++++ b/app/src/main/res/layout/menu_item.xml	(date 1700451881092)
+@@ -0,0 +1,82 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:gravity="center"
++    android:orientation="vertical">
++
++    <androidx.cardview.widget.CardView
++        android:layout_width="190dp"
++        android:layout_height="240dp"
++        android:layout_marginVertical="18dp"
++        android:layout_marginRight="24dp"
++        app:cardCornerRadius="10dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent"
++            android:background="@drawable/shape_card">
++
++            <com.google.android.material.imageview.ShapeableImageView
++                android:id="@+id/menuImage"
++                android:layout_width="match_parent"
++                android:layout_height="120dp"
++                android:layout_marginHorizontal="10dp"
++                android:layout_marginTop="10dp"
++                android:scaleType="centerCrop"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent"
++                app:shapeAppearanceOverlay="@style/RoundedSquare" />
++
++            <TextView
++                android:id="@+id/menuNamaBarang"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:fontFamily="@font/poppins_medium"
++                android:text="Stuff Name"
++                android:textSize="14sp"
++                app:layout_constraintStart_toStartOf="@+id/menuImage"
++                app:layout_constraintTop_toBottomOf="@+id/menuImage" />
++
++            <TextView
++                android:id="@+id/menuPrice"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="12dp"
++                android:layout_marginTop="10dp"
++                android:fontFamily="@font/poppins_semibold"
++                android:text="Rp. 15000"
++                android:textColor="@color/primary"
++                android:textSize="16sp"
++                app:layout_constraintBottom_toTopOf="@+id/menuAddToCart"
++                app:layout_constraintStart_toEndOf="@id/menuNamaBarang"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/menuImage" />
++
++            <TextView
++                android:id="@+id/menuAddToCart"
++                android:layout_width="match_parent"
++                android:layout_height="27dp"
++                android:layout_marginHorizontal="12dp"
++                android:layout_marginTop="8dp"
++                android:layout_marginBottom="10dp"
++                android:background="@drawable/shape_addcart"
++                android:fontFamily="@font/poppins_medium"
++                android:gravity="center"
++                android:text="Add to Cart "
++                android:textColor="@color/white"
++                android:textSize="12sp"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintEnd_toEndOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toBottomOf="@+id/menuPrice" />
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++    </androidx.cardview.widget.CardView>
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/truck.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/truck.xml b/app/src/main/res/drawable/truck.xml
+new file mode 100644
+--- /dev/null	(date 1700471296857)
++++ b/app/src/main/res/drawable/truck.xml	(date 1700471296857)
+@@ -0,0 +1,13 @@
++<vector xmlns:android="http://schemas.android.com/apk/res/android"
++    android:width="24dp"
++    android:height="24dp"
++    android:viewportWidth="24"
++    android:viewportHeight="24">
++  <path
++      android:pathData="M14,7H16.337C16.582,7 16.704,7 16.819,7.028C16.921,7.052 17.019,7.093 17.108,7.147C17.209,7.209 17.296,7.296 17.469,7.469L21.531,11.531C21.704,11.704 21.791,11.791 21.853,11.892C21.907,11.981 21.948,12.079 21.972,12.181C22,12.296 22,12.418 22,12.663V15.5C22,15.966 22,16.199 21.924,16.383C21.822,16.628 21.628,16.822 21.383,16.924C21.199,17 20.966,17 20.5,17M15.5,17H14M14,17V7.2C14,6.08 14,5.52 13.782,5.092C13.59,4.716 13.284,4.41 12.908,4.218C12.48,4 11.92,4 10.8,4H5.2C4.08,4 3.52,4 3.092,4.218C2.716,4.41 2.41,4.716 2.218,5.092C2,5.52 2,6.08 2,7.2V15C2,16.105 2.895,17 4,17M14,17H10M10,17C10,18.657 8.657,20 7,20C5.343,20 4,18.657 4,17M10,17C10,15.343 8.657,14 7,14C5.343,14 4,15.343 4,17M20.5,17.5C20.5,18.881 19.381,20 18,20C16.619,20 15.5,18.881 15.5,17.5C15.5,16.119 16.619,15 18,15C19.381,15 20.5,16.119 20.5,17.5Z"
++      android:strokeLineJoin="round"
++      android:strokeWidth="2"
++      android:fillColor="#00000000"
++      android:strokeColor="@color/startColor"
++      android:strokeLineCap="round"/>
++</vector>
+Index: app/src/main/java/com/example/pharmalink/MenuBootomSheetFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/MenuBootomSheetFragment.kt b/app/src/main/java/com/example/pharmalink/MenuBootomSheetFragment.kt
+new file mode 100644
+--- /dev/null	(date 1700455808865)
++++ b/app/src/main/java/com/example/pharmalink/MenuBootomSheetFragment.kt	(date 1700455808865)
+@@ -0,0 +1,48 @@
++package com.example.pharmalink
++
++import android.os.Bundle
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++import androidx.recyclerview.widget.LinearLayoutManager
++import com.example.pharmalink.adapter.MenuAdapter
++import com.example.pharmalink.databinding.FragmentMenuBootomSheetBinding
++import com.google.android.material.bottomsheet.BottomSheetDialogFragment
++
++class MenuBootomSheetFragment : BottomSheetDialogFragment(){
++    private lateinit var binding: FragmentMenuBootomSheetBinding
++
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++    }
++    override fun onCreateView(
++        inflater: LayoutInflater, container: ViewGroup?,
++                              savedInstanceState: Bundle?): View? {
++        binding = FragmentMenuBootomSheetBinding.inflate(inflater,container,false)
++
++        binding.buttonBack.setOnClickListener {
++            dismiss()
++        }
++
++        val menuDrugName = listOf("Paracetamol","Procold","Bodrex","Amoxcilin","Procold","Bodrex")
++        val menuItemPrice = listOf("Rp. 5000", "Rp. 7000", "Rp. 5000", "Rp. 15000", "Rp. 7000", "Rp. 5000")
++        val menuImage = listOf(
++            R.drawable.medicine_paracetamol,
++            R.drawable.medicine_procold,
++            R.drawable.medicine_bodrex,
++            R.drawable.medicine_amoxiline,
++            R.drawable.medicine_procold,
++            R.drawable.medicine_bodrex,
++        )
++
++        val adapter = MenuAdapter(ArrayList(menuDrugName), ArrayList(menuItemPrice), ArrayList(menuImage))
++        binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
++        binding.menuRecyclerView.adapter = adapter
++        return binding.root
++
++    }
++
++    companion object {
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_menu_bootom_sheet.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_menu_bootom_sheet.xml b/app/src/main/res/layout/fragment_menu_bootom_sheet.xml
+new file mode 100644
+--- /dev/null	(date 1700455772381)
++++ b/app/src/main/res/layout/fragment_menu_bootom_sheet.xml	(date 1700455772381)
+@@ -0,0 +1,36 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content"
++    android:orientation="vertical"
++
++    android:background="@color/white"
++    tools:context=".MenuBootomSheetFragment">
++
++    <!-- TODO: Update blank fragment layout -->
++    <ImageButton
++        android:id="@+id/buttonBack"
++        android:layout_marginTop="8dp"
++        android:layout_marginLeft="8dp"
++        android:layout_width="24dp"
++        android:layout_height="24dp"
++        android:background="@android:color/transparent"
++        android:src="@drawable/arrow_left"/>
++    <TextView
++        android:layout_marginTop="8dp"
++        android:gravity="center"
++        android:textSize="24sp"
++        android:textColor="@color/black"
++        android:fontFamily="@font/poppins_medium"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        android:text="Cart" />
++
++    <androidx.recyclerview.widget.RecyclerView
++        android:id="@+id/menuRecyclerView"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="8dp" />
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/notification_item.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/notification_item.xml b/app/src/main/res/layout/notification_item.xml
+new file mode 100644
+--- /dev/null	(date 1700471970492)
++++ b/app/src/main/res/layout/notification_item.xml	(date 1700471970492)
+@@ -0,0 +1,56 @@
++<?xml version="1.0" encoding="utf-8"?>
++<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="wrap_content">
++
++    <androidx.cardview.widget.CardView
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="16dp"
++        android:layout_marginTop="8dp"
++        android:layout_marginEnd="16dp"
++        android:layout_marginBottom="8dp"
++        app:cardCornerRadius="15dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent">
++
++        <androidx.constraintlayout.widget.ConstraintLayout
++            android:layout_width="match_parent"
++            android:layout_height="match_parent">
++
++            <androidx.cardview.widget.CardView
++                android:id="@+id/cardView3"
++                android:layout_width="30dp"
++                android:layout_height="30dp"
++                android:layout_marginStart="16dp"
++                android:layout_marginTop="8dp"
++                android:layout_marginBottom="8dp"
++                app:cardCornerRadius="15dp"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintStart_toStartOf="parent"
++                app:layout_constraintTop_toTopOf="parent">
++
++                <ImageView
++                    android:id="@+id/notificationImageView"
++                    android:layout_width="wrap_content"
++                    android:layout_height="wrap_content"
++                    />
++            </androidx.cardview.widget.CardView>
++
++            <TextView
++                android:id="@+id/notificationTextView"
++                android:layout_width="wrap_content"
++                android:layout_height="wrap_content"
++                android:layout_marginStart="32dp"
++                android:text="TextView"
++                app:layout_constraintBottom_toBottomOf="parent"
++                app:layout_constraintStart_toEndOf="@+id/cardView3"
++                app:layout_constraintTop_toTopOf="parent" />
++        </androidx.constraintlayout.widget.ConstraintLayout>
++
++    </androidx.cardview.widget.CardView>
++</androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/example/pharmalink/Notification_Bottom_Fragmet.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/Notification_Bottom_Fragmet.kt b/app/src/main/java/com/example/pharmalink/Notification_Bottom_Fragmet.kt
+new file mode 100644
+--- /dev/null	(date 1700474096819)
++++ b/app/src/main/java/com/example/pharmalink/Notification_Bottom_Fragmet.kt	(date 1700474096819)
+@@ -0,0 +1,40 @@
++package com.example.pharmalink
++
++import android.os.Bundle
++import androidx.fragment.app.Fragment
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++import androidx.recyclerview.widget.LinearLayoutManager
++import com.example.pharmalink.adapter.NotificationAdapter
++import com.example.pharmalink.databinding.FragmentNotificationBottomFragmetBinding
++import com.google.android.material.bottomsheet.BottomSheetDialogFragment
++
++class Notification_Bottom_Fragmet : BottomSheetDialogFragment() {
++    private lateinit var binding: FragmentNotificationBottomFragmetBinding
++    override fun onCreate(savedInstanceState: Bundle?) {
++        super.onCreate(savedInstanceState)
++
++    }
++
++    override fun onCreateView(
++        inflater: LayoutInflater, container: ViewGroup?,
++        savedInstanceState: Bundle?
++    ): View? {
++        // Inflate the layout for this fragment
++        binding = FragmentNotificationBottomFragmetBinding.inflate(layoutInflater,container,false)
++        val notifications = listOf("Your order has been canceled successfully", "Order has been taken by the driver","congrats your order placed")
++        val notificationImages = listOf(R.drawable.sademoji, R.drawable.truck, R.drawable.congrats)
++        val adapter = NotificationAdapter(
++            ArrayList(notifications),
++            ArrayList(notificationImages)
++        )
++        binding.notificationRecyclerView.layoutManager = LinearLayoutManager(requireContext())
++        binding.notificationRecyclerView.adapter = adapter
++        return binding.root
++    }
++
++    companion object {
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_notification__bottom__fragmet.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_notification__bottom__fragmet.xml b/app/src/main/res/layout/fragment_notification__bottom__fragmet.xml
+new file mode 100644
+--- /dev/null	(date 1700474033209)
++++ b/app/src/main/res/layout/fragment_notification__bottom__fragmet.xml	(date 1700474033209)
+@@ -0,0 +1,41 @@
++<?xml version="1.0" encoding="utf-8"?>
++<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:app="http://schemas.android.com/apk/res-auto"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    android:background="@color/white"
++    tools:context=".Notification_Bottom_Fragmet">
++
++    <!-- TODO: Update blank fragment layout -->
++    <androidx.constraintlayout.widget.ConstraintLayout
++        android:layout_width="match_parent"
++        android:layout_height="match_parent">
++
++        <TextView
++            android:id="@+id/textView13"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:layout_marginTop="32dp"
++            android:fontFamily="@font/poppins_medium"
++            android:text="Notfications"
++            android:textColor="#4CAF50"
++            android:textSize="20sp"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toTopOf="parent" />
++
++        <androidx.recyclerview.widget.RecyclerView
++            android:id="@+id/notificationRecyclerView"
++            android:layout_width="match_parent"
++            android:layout_height="0dp"
++            android:layout_marginStart="8dp"
++            android:layout_marginTop="16dp"
++            android:layout_marginEnd="8dp"
++            tools:listitem="@layout/notification_item"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
++            app:layout_constraintTop_toBottomOf="@+id/textView13" />
++    </androidx.constraintlayout.widget.ConstraintLayout>
++
++</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/drawable/profileedittextshape.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/profileedittextshape.xml b/app/src/main/res/drawable/profileedittextshape.xml
+new file mode 100644
+--- /dev/null	(date 1700467937519)
++++ b/app/src/main/res/drawable/profileedittextshape.xml	(date 1700467937519)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="utf-8"?>
++<shape xmlns:android="http://schemas.android.com/apk/res/android">
++<stroke android:width="1dp" android:color="#f4f4f4"/>
++    <solid android:color="@color/white"/>
++        <corners android:radius="15dp"/>
++
++</shape>
+\ No newline at end of file
+Index: app/src/main/java/com/example/pharmalink/adapter/MenuAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/adapter/MenuAdapter.kt b/app/src/main/java/com/example/pharmalink/adapter/MenuAdapter.kt
+new file mode 100644
+--- /dev/null	(date 1700451986284)
++++ b/app/src/main/java/com/example/pharmalink/adapter/MenuAdapter.kt	(date 1700451986284)
+@@ -0,0 +1,31 @@
++package com.example.pharmalink.adapter
++
++import android.view.LayoutInflater
++import android.view.ViewGroup
++import androidx.recyclerview.widget.RecyclerView
++import com.example.pharmalink.databinding.MenuItemBinding
++
++class MenuAdapter(private val menuItemsName:MutableList<String>,private val menuItemPrice:MutableList<String>, private val MenuImage:MutableList<Int>):RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
++
++
++    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
++        val binding = MenuItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
++        return MenuViewHolder(binding)
++    }
++
++    override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
++        holder.bind(position)
++    }
++    override fun getItemCount(): Int = menuItemsName.size
++    inner class MenuViewHolder(private val binding: MenuItemBinding): RecyclerView.ViewHolder(binding.root) {
++        fun bind(position: Int) {
++            binding.apply {
++                menuNamaBarang.text=menuItemsName[position]
++                menuPrice.text= menuItemPrice[position]
++                menuImage.setImageResource(MenuImage[position])
++            }
++        }
++
++    }
++
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/pharmalink/adapter/NotificationAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/adapter/NotificationAdapter.kt b/app/src/main/java/com/example/pharmalink/adapter/NotificationAdapter.kt
+new file mode 100644
+--- /dev/null	(date 1700470786891)
++++ b/app/src/main/java/com/example/pharmalink/adapter/NotificationAdapter.kt	(date 1700470786891)
+@@ -0,0 +1,32 @@
++package com.example.pharmalink.adapter
++
++import android.view.LayoutInflater
++import android.view.ViewGroup
++import androidx.recyclerview.widget.RecyclerView
++import com.example.pharmalink.databinding.NotificationItemBinding
++
++class NotificationAdapter(private var notification : ArrayList<String>, private var notificationImage : ArrayList<Int> ): RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder>() {
++
++
++    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotificationViewHolder {
++        val binding = NotificationItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
++        return NotificationViewHolder(binding)
++    }
++
++
++
++    override fun onBindViewHolder(holder: NotificationViewHolder, position: Int) {
++        holder.bind(position)
++    }
++    override fun getItemCount(): Int = notification.size
++    inner class NotificationViewHolder(private val binding: NotificationItemBinding): RecyclerView.ViewHolder(binding.root){
++        fun bind(position: Int) {
++            binding.apply {
++                notificationTextView.text = notification[position]
++                notificationImageView.setImageResource(notificationImage[position])
++            }
++
++        }
++
++    }
++}
+\ No newline at end of file
+Index: app/src/main/java/com/example/pharmalink/adapter/BuyAgainAdapter.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/pharmalink/adapter/BuyAgainAdapter.kt b/app/src/main/java/com/example/pharmalink/adapter/BuyAgainAdapter.kt
+new file mode 100644
+--- /dev/null	(date 1700465810410)
++++ b/app/src/main/java/com/example/pharmalink/adapter/BuyAgainAdapter.kt	(date 1700465810410)
+@@ -0,0 +1,32 @@
++package com.example.pharmalink.adapter
++
++import android.view.LayoutInflater
++import android.view.ViewGroup
++import androidx.recyclerview.widget.RecyclerView
++import com.example.pharmalink.databinding.BuyAgainItemBinding
++
++class BuyAgainAdapter(private val buyAgainDrugName: List<String>, private val
++buyAgainDrugPrice: List<String>, private val buyAgainDrugImage: List<Int>
++) : RecyclerView
++    .Adapter<BuyAgainAdapter.BuyAgainViewHolder>() {
++
++    override fun onBindViewHolder(holder: BuyAgainViewHolder, position: Int) {
++holder.bind(buyAgainDrugName[position],buyAgainDrugPrice[position],buyAgainDrugImage[position])
++    }
++    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BuyAgainViewHolder {
++        val binding = BuyAgainItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
++        return BuyAgainViewHolder(binding)
++    }
++
++    override fun getItemCount(): Int = buyAgainDrugName.size
++    class BuyAgainViewHolder(private val binding: BuyAgainItemBinding): RecyclerView.ViewHolder
++        (binding.root){
++        fun bind(drugName: String, drugPrice: String, drugImage: Int) {
++            binding.buyAgainDrugName.text=drugName
++            binding.buyAgainDrugPrice.text=drugPrice
++            binding.buyAgainDrugImage.setImageResource(drugImage)
++        }
++
++    }
++
++}
+\ No newline at end of file

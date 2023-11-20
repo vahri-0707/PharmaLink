@@ -1,21 +1,26 @@
 package com.example.pharmalink.Fragment
 
 import android.os.Bundle
+import android.os.TestLooperManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.example.pharmalink.MenuBootomSheetFragment
+import com.example.pharmalink.Notification_Bottom_Fragmet
 import com.example.pharmalink.R
 import com.example.pharmalink.adapter.PopularAdapter
 import com.example.pharmalink.databinding.FragmentHomeBinding
 
 
 class HomeFragment : Fragment() {
+
     private lateinit var binding: FragmentHomeBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,7 +33,16 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentHomeBinding.inflate(layoutInflater)
         binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding.notificationButton.setOnClickListener{
+            val bottomSheetDialog = Notification_Bottom_Fragmet()
+            bottomSheetDialog.show(parentFragmentManager,"Test")
+        }
+        binding.viewAllBarang.setOnClickListener{
+            val bottomSheetDialog = MenuBootomSheetFragment()
+            bottomSheetDialog.show(parentFragmentManager,"Test")
+        }
         return binding.root
     }
 
@@ -66,7 +80,9 @@ class HomeFragment : Fragment() {
         binding.PopularRecyclerView.layoutManager = layoutManager
 
         binding.PopularRecyclerView.adapter = adapter
-    }
+
+
+        }
 
     companion object {
     }
