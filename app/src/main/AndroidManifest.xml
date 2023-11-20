@@ -16,6 +16,9 @@
             android:name=".activity_cart"
             android:exported="false" />
         <activity
+            android:name=".PayOutActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
