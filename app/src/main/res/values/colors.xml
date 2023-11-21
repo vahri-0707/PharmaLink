@@ -9,4 +9,6 @@
     <color name="red">#FFBE3144</color>
     <color name="iconColor">#FEAD1D</color>
     <color name="startColor">#4CAF50</color>
+    <color name="darkbackground">#1A1832</color>
+    <color name="dark">#2A294C</color>
 </resources>
