@@ -72,7 +72,7 @@ class HomeFragment : Fragment() {
         val Price = listOf("Rp. 5000", "Rp. 7000", "Rp. 5000", "Rp. 15000")
         val fotoBarangTerlarisImages = listOf(R.drawable.medicine_paracetamol, R.drawable.medicine_procold, R.drawable.medicine_bodrex, R.drawable.medicine_amoxiline)
 
-        val adapter = PopularAdapter(namaBarang, Price, fotoBarangTerlarisImages)
+        val adapter = PopularAdapter(namaBarang, Price, fotoBarangTerlarisImages, requireContext())
 
 
         // Use a GridLayoutManager with 2 columns

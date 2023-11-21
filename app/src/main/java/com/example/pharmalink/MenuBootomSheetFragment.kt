@@ -33,7 +33,7 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment(){
             R.drawable.medicine_bodrex,
         )
 
-        val adapter = MenuAdapter(ArrayList(menuDrugName), ArrayList(menuItemPrice), ArrayList(menuImage))
+        val adapter = MenuAdapter(ArrayList(menuDrugName), ArrayList(menuItemPrice), ArrayList(menuImage), requireContext())
         // Use GridLayoutManager with 2 columns
         val layoutManager = GridLayoutManager(requireContext(), 2)
         binding.menuRecyclerView.layoutManager = layoutManager
