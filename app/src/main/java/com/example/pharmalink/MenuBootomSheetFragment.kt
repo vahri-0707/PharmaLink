@@ -4,10 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.pharmalink.adapter.MenuAdapter
 import com.example.pharmalink.databinding.FragmentMenuBootomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+
 
 class MenuBootomSheetFragment : BottomSheetDialogFragment(){
     private lateinit var binding: FragmentMenuBootomSheetBinding
@@ -17,12 +18,9 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment(){
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
-        binding = FragmentMenuBootomSheetBinding.inflate(inflater,container,false)
-
-        binding.buttonBack.setOnClickListener {
-            dismiss()
-        }
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentMenuBootomSheetBinding.inflate(inflater, container, false)
 
         val menuDrugName = listOf("Paracetamol","Procold","Bodrex","Amoxcilin","Procold","Bodrex")
         val menuItemPrice = listOf("Rp. 5000", "Rp. 7000", "Rp. 5000", "Rp. 15000", "Rp. 7000", "Rp. 5000")
@@ -36,8 +34,11 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment(){
         )
 
         val adapter = MenuAdapter(ArrayList(menuDrugName), ArrayList(menuItemPrice), ArrayList(menuImage))
-        binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        // Use GridLayoutManager with 2 columns
+        val layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.menuRecyclerView.layoutManager = layoutManager
         binding.menuRecyclerView.adapter = adapter
+
         return binding.root
 
     }

@@ -12,19 +12,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:cardElevation="0dp">
+        app:cardElevation="0dp"
+        android:layout_marginBottom="19dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/shape_cartcard">
+            android:background="@drawable/shape_historycard">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/cartImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginVertical="24dp"
-                android:layout_marginLeft="24dp"
+                android:layout_marginVertical="12dp"
+                android:layout_marginLeft="12dp"
                 android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +37,7 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Stuff Name"
                 android:textSize="16sp"
@@ -48,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginBottom="66dp"
+                android:layout_marginBottom="54dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Price"
                 android:textColor="@color/primary"
@@ -60,7 +61,7 @@
                 android:id="@+id/cartItemQuantity"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
-                android:layout_marginBottom="26dp"
+                android:layout_marginBottom="14dp"
                 android:background="@color/primary"
                 android:fontFamily="@font/poppins_medium"
                 android:gravity="center"
@@ -76,7 +77,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="24dp"
-                android:layout_marginBottom="26dp"
+                android:layout_marginBottom="14dp"
                 android:background="@drawable/shape_minusplus"
                 android:padding="2dp"
                 android:src="@drawable/minus"
@@ -99,7 +100,7 @@
                 android:id="@+id/plusButton"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginBottom="26dp"
+                android:layout_marginBottom="14dp"
                 android:layout_marginStart="-6dp"
                 android:background="@drawable/shape_minusplus"
                 android:padding="10dp"
@@ -122,7 +123,7 @@
                 android:id="@+id/deleteButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="24dp"
+                android:layout_marginRight="12dp"
                 android:background="@color/background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

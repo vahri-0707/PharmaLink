@@ -4,42 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shape_nav"
     tools:context=".CongratsBottomSheet">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="600dp">
 
         <TextView
+            android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="32dp"
-            android:text="Pesanan Anda Berhasil Dibuat"
-            android:textSize="20sp" />
+            android:fontFamily="@font/poppins_bold"
+            android:text="PAYMENT SUCCEDED"
+            android:textColor="@color/primary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Your order was placed, you can always track its status on Order History Page"
+            android:textAlignment="center"
+            android:textColor="@color/textcolor"
+            android:textSize="15.5sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView14"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/ic_check" />
+            android:layout_marginTop="35dp"
+            android:src="@drawable/ill_payment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_gravity="center"
-            android:background="@drawable/shape_addcart"
             android:id="@+id/goHome"
-            android:layout_width="157dp"
-            android:layout_height="57dp"
-            android:layout_marginTop="32dp"
-            android:text="BACK" />
+            style="@style/NoElevationButton"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/shape_addcart"
+            android:elevation="0dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Go to My Orders"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="@+id/imageView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <View
+            android:id="@+id/view2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

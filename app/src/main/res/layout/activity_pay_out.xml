@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,194 +7,322 @@
     android:orientation="vertical"
     tools:context=".PayOutActivity">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".Fragment.CartFragment">
 
-        <ImageButton
-            android:id="@+id/button2"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
-            android:background="@android:color/transparent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_back"
-            android:text="Button" />
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Order information"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/shape_profilecontainer"
+            android:elevation="1dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView17">
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/shape_profileitem"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Name"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"></TextView>
+
+                <EditText
+                    android:layout_width="215dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="vhrimlna@gmail.com"
+                    android:textAlignment="textEnd"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_profileitem"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Phone"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"></TextView>
+
+                <EditText
+                    android:layout_width="215dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="085156630749"
+                    android:textAlignment="textEnd"
+                    android:background="@android:color/transparent"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout33"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_profileitem"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout22">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_location" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Address"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"></TextView>
+
+                <EditText
+                    android:layout_width="198dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Aku tinggal di Universitas Islam Indonesia, Jalan Kaliurang KM 14,5 Sleman Yogyakarta"
+                    android:textAlignment="textEnd"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout44"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_profileitem"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout33">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="22dp"
+                    android:src="@drawable/ic_paymethod" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Payment Method"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"></TextView>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_marginLeft="50dp"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/payment_mandiri" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout55"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingVertical="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout44">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_totalpay" />
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Total Payment"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"></TextView>
+
+                <EditText
+                    android:layout_width="198dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Rp. 69.696"
+                    android:textColor="@color/primary"
+                    android:textAlignment="textEnd"
+                    android:textSize="13sp"></EditText>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nav_checkout"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/PlaceMyOrder"
+                style="@style/NoElevationButton"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/shape_proceedbutton"
+                android:backgroundTint="@color/primary"
+                android:elevation="0dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingTop="3dp"
+                android:text="Place My Order"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/nav_checkout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dp"
-            android:text="Edit"
-            android:textSize="20sp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Checkout"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:id="@+id/buttonBackToHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/ic_back"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="8dp"
-                android:text="Nama" />
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="text"
-                android:text="Nama" />
-        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="8dp"
-                android:text="Alamat" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="textMultiLine"
-                android:text="Alamat" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="8dp"
-                android:text="Telepon" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="text"
-                android:text="091827373" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="8dp"
-                android:text="Metode Pembayaran" />
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/payment_mandiri" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-            <TextView
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="8dp"
-                android:text="Total Pembayaran" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:gravity="end"
-                android:inputType="none"
-                android:paddingEnd="32dp"
-                android:text="Rp. 5000"
-                android:textSize="20sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/PlaceMyOrder"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="32dp"
-        android:elevation="10sp"
-        android:text="Place My Order" />
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

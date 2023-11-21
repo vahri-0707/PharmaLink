@@ -1,161 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     android:orientation="vertical"
     android:paddingStart="6dp"
-    android:backgroundTint="@color/white"
     android:paddingEnd="6dp"
     tools:context=".Fragment.ProfileFragment">
-    <LinearLayout
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="48dp"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="4dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Vahri Maulana"
+        android:textColor="@color/textcolor"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"></EditText>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/shape_profilecontainer"
+        android:elevation="1dp"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/profileedittextshape"
-            android:elevation="2dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Name"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="text"
-                android:text="ParaPriya" />
-        </LinearLayout>
-
-        <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/profileedittextshape"
-            android:elevation="2dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginTop="1dp"
+            android:background="@drawable/shape_profileitem"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_email" />
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Address"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="textMultiLine"
-                android:text="aku tinggal di universitas islam indonesia jalan kaliurang km 14.5, sleman jogjakarta" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/profileedittextshape"
-            android:elevation="2dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
                 android:text="Email"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textColor="@color/gray"
+                android:textSize="13sp"></TextView>
 
             <EditText
-                android:layout_width="wrap_content"
+                android:layout_width="215dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center"
                 android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="textEmailAddress"
-                android:text="ParaPriya@gmail.com" />
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="vhrimlna@gmail.com"
+                android:textAlignment="textEnd"
+                android:textSize="13sp"></EditText>
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/profileedittextshape"
-            android:elevation="2dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_profileitem"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_phone" />
 
             <TextView
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/poppins_medium"
-                android:text="Phone"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
-
-            <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Phone"
+                android:textColor="@color/gray"
+                android:textSize="13sp"></TextView>
+
+            <EditText
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="085156630749"
+                android:textAlignment="textEnd"
                 android:background="@android:color/transparent"
-                android:ems="10"
-                android:inputType="phone"
-                android:text="12345678" />
+                android:textSize="13sp"></EditText>
         </LinearLayout>
-        
-</LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
-        android:elevation="5dp"
-        android:background="@drawable/proceedbutonshape"
-        android:layout_width="match_parent"
-        android:layout_marginBottom="32dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginLeft="8dp"
-        android:textAllCaps="false"
-        android:layout_height="56dp"
-        android:layout_gravity="bottom"
-        android:textColor="@color/textcolor"
-        android:textSize="20sp"
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Address"
+                android:textColor="@color/gray"
+                android:textSize="13sp"></TextView>
+
+            <EditText
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Aku tinggal di Universitas Islam Indonesia, Jalan Kaliurang KM 14,5 Sleman Yogyakarta"
+                android:textAlignment="textEnd"
+                android:textSize="13sp"></EditText>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/save_information" />
+        android:text="Personal information"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Active since July, 2023"
+        android:textColor="@color/primary"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSaveInfo"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        app:cornerRadius="7dp"
+        app:strokeWidth="1.5dp"
+        app:strokeColor="@color/primary"
+        android:textSize="16sp"
+        android:paddingBottom="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:backgroundTint="@color/white"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Save Information"
+        android:textColor="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonLogout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/poppins_medium"
+        android:paddingBottom="5dp"
+        android:text="Logout"
+        android:textSize="16sp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSaveInfo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

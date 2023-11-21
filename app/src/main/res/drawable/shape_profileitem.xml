@@ -9,7 +9,8 @@
     </item>
     <item android:right="-2dp" android:left="-2dp" android:bottom="0.8dp"> <!-- Adjust the values to control the width of the stroke -->
         <shape android:shape="rectangle">
-            <solid android:color="@color/background" />
+            <solid android:color="@color/white" />
+
         </shape>
     </item>
 </layer-list>
