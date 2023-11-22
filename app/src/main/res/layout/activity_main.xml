@@ -72,7 +72,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/pendingOrderButton"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginHorizontal="30dp"
@@ -140,7 +140,7 @@
         android:background="@drawable/shape_dashboard_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/pendingOrderButton">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout6"
@@ -354,7 +354,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout12"
+        android:id="@+id/createUser"
         android:layout_width="158.5dp"
         android:layout_height="120dp"
         android:layout_marginTop="14dp"
@@ -468,7 +468,7 @@
         android:layout_marginRight="30dp"
         android:background="@drawable/shape_dashboard_container"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+        app:layout_constraintTop_toBottomOf="@+id/createUser">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="40dp"

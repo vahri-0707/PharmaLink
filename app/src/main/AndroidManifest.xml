@@ -19,6 +19,12 @@
             android:name=".OutForDeliveryActivity"
             android:exported="false" />
         <activity
+            android:name=".PendingOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateUserActivity"
+            android:exported="false" />
+        <activity
             android:name=".AllItemActivity"
             android:exported="false" />
         <activity
