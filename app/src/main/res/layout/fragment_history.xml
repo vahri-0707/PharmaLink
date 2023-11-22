@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".Fragment.HistoryFragment">
 
     <TextView
@@ -19,10 +20,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/buttonBackToHome"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="26dp"
+        android:id="@+id/buttonBackToHomee"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="29dp"
         android:layout_marginLeft="20dp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"

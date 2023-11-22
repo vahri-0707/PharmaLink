@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
+    android:background="@color/background"
     android:orientation="vertical"
     android:paddingStart="6dp"
     android:paddingEnd="6dp"
@@ -14,7 +14,7 @@
         android:id="@+id/imageView5"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:padding="3dp"
         android:scaleType="centerCrop"
         android:src="@drawable/banner_1"
@@ -196,9 +196,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins_medium"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Personal information"
-        android:textSize="16sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -218,7 +218,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSaveInfo"
         android:layout_width="match_parent"
-        android:layout_height="54dp"
+        android:layout_height="53dp"
         app:cornerRadius="7dp"
         app:strokeWidth="1.5dp"
         app:strokeColor="@color/primary"

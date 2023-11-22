@@ -21,11 +21,11 @@
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/poppins_medium"
+            android:fontFamily="@font/poppins_semibold"
             android:text="Order information"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="20dp"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -313,9 +313,9 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/buttonBackToHome"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:id="@+id/buttonBackToCart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="26dp"
             android:src="@drawable/ic_back"

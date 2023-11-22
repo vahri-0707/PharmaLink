@@ -56,7 +56,7 @@
             android:id="@+id/goHome"
             style="@style/NoElevationButton"
             android:layout_width="match_parent"
-            android:layout_height="53dp"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="17dp"
