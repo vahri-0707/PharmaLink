@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="textcolor">#FF3A3C4E</color>
+    <color name="textcolor">#FFF7F3F0</color>
     <color name="background">#FFF9F9F9</color>
     <color name="gray">#FFA6A8AD</color>
     <color name="primary">#FF56BED1</color>
@@ -11,4 +11,8 @@
     <color name="startColor">#4CAF50</color>
     <color name="darkbackground">#1A1832</color>
     <color name="dark">#2A294C</color>
+
+    <color name="received_color">#00FF00</color>
+    <color name="not_received_color">#FF0000</color>
+    <color name="pending_color">#808080</color>
 </resources>

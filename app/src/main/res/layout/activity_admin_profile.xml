@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkbackground"
+    tools:context=".AdminProfileActivity">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="29dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Admin Profile"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView5"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="52dp"
+        android:padding="3dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="4dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Vahri Maulana"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"></EditText>
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-6dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Active since July, 2023"
+        android:textColor="@color/primary"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Personal information"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="8dp"
+        android:elevation="1dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:background="@drawable/shape_profileitem"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_email" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Email"
+                android:textColor="@color/textcolor"
+                android:textSize="13sp"></TextView>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="11dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:text="vhrimlna@gmail.com"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="13sp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_profileitem"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Phone"
+                android:textColor="@color/textcolor"
+                android:textSize="13sp"></TextView>
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="6dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:text="085156630749"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="13sp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_profileitem"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Address"
+                android:textColor="@color/textcolor"
+                android:textSize="13sp"></TextView>
+
+            <EditText
+                android:id="@+id/address"
+                android:layout_width="198dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Aku tinggal di Universitas Islam Indonesia, Jalan Kaliurang KM 14,5 Sleman Yogyakarta"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="13sp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark"
+            android:orientation="horizontal"
+            android:paddingVertical="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <ImageView
+                android:id="@+id/imageView33"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginLeft="22dp"
+                android:src="@drawable/ic_padlock" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="1dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Password"
+                android:textColor="@color/textcolor"
+                android:textSize="13sp"></TextView>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="188dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="1dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textPassword"
+                android:text="nama saya"
+                android:textAlignment="textEnd"
+                android:textColor="@color/white"
+                android:textSize="13sp"></EditText>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveInformation"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingTop="6dp"
+        android:text="Save Information"
+        android:textSize="16sp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <TextView
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edit"
+        android:fontFamily="@font/poppins_semibold"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="2dp"
+        android:layout_marginRight="24dp"
+        android:text="Edit Information"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
