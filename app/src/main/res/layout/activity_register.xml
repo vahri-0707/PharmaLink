@@ -15,8 +15,10 @@
         android:text="Create Account 👋"
         android:textColor="@color/white"
         android:textSize="22sp"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="42dp" />
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
@@ -55,7 +57,7 @@
         app:startIconTint="@color/textcolor">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/storeregisteredit"
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark"
@@ -89,7 +91,7 @@
         app:startIconTint="@color/textcolor">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/unameregisteredit"
+            android:id="@+id/restaurantName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark"
@@ -123,7 +125,7 @@
         app:startIconTint="@color/textcolor">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailregisteredit"
+            android:id="@+id/emailOrPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark"
@@ -159,7 +161,7 @@
         app:startIconTint="@color/textcolor">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passregisteredit"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark"
@@ -170,7 +172,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/RegisterButton"
+        android:id="@+id/createUserButton"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginHorizontal="24dp"
@@ -220,7 +222,7 @@
         android:textColor="@color/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RegisterButton" />
+        app:layout_constraintTop_toBottomOf="@+id/createUserButton" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginGoogle"

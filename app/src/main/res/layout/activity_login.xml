@@ -50,13 +50,14 @@
         app:helperTextTextColor="@color/red"
         app:counterEnabled="true"
         app:counterMaxLength="20"
+        app:endIconTint="@color/textcolor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         app:startIconDrawable="@drawable/ic_email_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/emailloginedit"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark"
@@ -92,7 +93,7 @@
         app:startIconDrawable="@drawable/ic_lock_24">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/passloginedit"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark"
