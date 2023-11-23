@@ -53,7 +53,7 @@
       app:startIconDrawable="@drawable/ic_email_24">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/emailloginedit"
+        android:id="@+id/emailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Email"
@@ -81,7 +81,7 @@
       app:startIconDrawable="@drawable/ic_lock_24">
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/passloginedit"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint=""
@@ -141,7 +141,7 @@
       app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
   <com.google.android.material.button.MaterialButton
-      android:id="@+id/loginGoogle"
+      android:id="@+id/googleButton"
       style="@style/Widget.Material3.Button.OutlinedButton"
       android:layout_width="165dp"
       android:layout_height="55dp"
@@ -163,7 +163,7 @@
       app:strokeWidth="0.8dp"></com.google.android.material.button.MaterialButton>
 
   <com.google.android.material.button.MaterialButton
-      android:id="@+id/loginFacebook"
+      android:id="@+id/faceBookButton"
       style="@style/Widget.Material3.Button.OutlinedButton"
       android:layout_width="165dp"
       android:layout_height="55dp"
