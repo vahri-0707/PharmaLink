@@ -1,13 +1,15 @@
+
 {
   "project_info": {
-    "project_number": "687692583488",
-    "project_id": "pharmalink-96911",
-    "storage_bucket": "pharmalink-96911.appspot.com"
+    "project_number": "330262394371",
+    "firebase_url": "https://pharmalinkadmin-default-rtdb.firebaseio.com",
+    "project_id": "pharmalinkadmin",
+    "storage_bucket": "pharmalinkadmin.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:687692583488:android:da4130e0c9c7be653105a5",
+        "mobilesdk_app_id": "1:330262394371:android:fdfc47676de248319d0036",
         "android_client_info": {
           "package_name": "com.example.pharmalink"
         }
@@ -15,7 +17,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBIzp3-oQN9MYJLZEqWuwxYhATCtE23LmA"
+          "current_key": "AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330262394371:android:73c3fe494b9b834d9d0036",
+        "android_client_info": {
+          "package_name": "com.example.pharmalinkadmin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY"
         }
       ],
       "services": {
