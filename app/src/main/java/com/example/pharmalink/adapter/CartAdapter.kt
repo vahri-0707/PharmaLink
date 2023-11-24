@@ -25,9 +25,9 @@ class CartAdapter(
     private val context: Context,
     private val cartItems: MutableList<String>,
     private val cartItemPrices: MutableList<String>,
-    private var cartImages: MutableList<String>,
     private var cartDescriptions: MutableList<String>,
-    private var cartQuantity: MutableList<Int>
+    private var cartImages: MutableList<String>,
+    private val cartQuantity: MutableList<Int>
 ) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
 
     private val auth = FirebaseAuth.getInstance()
