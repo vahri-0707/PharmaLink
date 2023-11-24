@@ -53,18 +53,73 @@ class CartFragment : Fragment() {
             navigateToHome()
         }
 
-        binding.cartBottomnav.setOnClickListener{
-            val intent = Intent(requireContext(), PayOutActivity::class.java)
-            startActivity(intent)
+        binding.cartBottomnav.setOnClickListener {
+            getOrderItemsDetails()
+
         }
 
         return binding.root
     }
 
+    private fun getOrderItemsDetails() {
+        val orderIdReference: DatabaseReference =
+            database.reference.child("user").child(userId).child("CartItems")
+
+        val drugName = mutableListOf<String>()
+        val drugPrice = mutableListOf<String>()
+        val drugImage = mutableListOf<String>()
+        val drugDescription = mutableListOf<String>()
+
+        val drugQuantities = cartAdapter.getUpdateItemsQuantities()
+
+        orderIdReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+
+                for (drugSnapshot in snapshot.children) {
+                    val orderItems = drugSnapshot.getValue(CartItems::class.java)
+                    orderItems?.drugName?.let { drugName.add(it) }
+                    orderItems?.drugPrice?.let { drugPrice.add(it) }
+                    orderItems?.drugDescription?.let { drugDescription.add(it) }
+                    orderItems?.drugImage?.let { drugImage.add(it) }
+                }
+                orderNow(drugName, drugPrice, drugDescription, drugImage, drugQuantities)
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(
+                    requireContext(),
+                    "Order making Failed. Please Try Again",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+
+        })
+    }
+
+    private fun orderNow(
+        drugName: MutableList<String>,
+        drugPrice: MutableList<String>,
+        drugDescription: MutableList<String>,
+        drugImage: MutableList<String>,
+        drugQuantities: MutableList<Int>
+    ) {
+
+        if (isAdded && context != null) {
+            val intent = Intent(requireContext(), PayOutActivity::class.java)
+            intent.putExtra("DrugItemName", drugName as ArrayList<String>)
+            intent.putExtra("DrugItemPrice", drugPrice as ArrayList<String>)
+            intent.putExtra("DrugItemImage", drugImage as ArrayList<String>)
+            intent.putExtra("DrugItemDescription", drugDescription as ArrayList<String>)
+            intent.putExtra("DrugItemQuantities", drugQuantities as ArrayList<Int>)
+            startActivity(intent)
+        }
+    }
+
     private fun retrieveCartItems() {
         database = FirebaseDatabase.getInstance()
-        userId = auth.currentUser?.uid?:""
-        val drugReference : DatabaseReference = database.reference.child("user").child(userId).child("CartItems")
+        userId = auth.currentUser?.uid ?: ""
+        val drugReference: DatabaseReference =
+            database.reference.child("user").child(userId).child("CartItems")
 
         drugNames = mutableListOf()
         drugPrices = mutableListOf()
@@ -72,9 +127,9 @@ class CartFragment : Fragment() {
         quantity = mutableListOf()
         drugDescriptions = mutableListOf()
 
-        drugReference.addListenerForSingleValueEvent(object: ValueEventListener{
+        drugReference.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                for (drugSnapshot in snapshot.children){
+                for (drugSnapshot in snapshot.children) {
                     val cartItems = drugSnapshot.getValue(CartItems::class.java)
 
                     cartItems?.drugName?.let { drugNames.add(it) }
@@ -87,9 +142,17 @@ class CartFragment : Fragment() {
             }
 
             private fun setAdapter() {
-                val adapter = CartAdapter(requireContext(), drugNames, drugPrices, drugDescriptions, drugImageUri, quantity)
-                binding.cartRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                binding.cartRecyclerView.adapter = adapter
+                 cartAdapter = CartAdapter(
+                    requireContext(),
+                    drugNames,
+                    drugPrices,
+                    drugDescriptions,
+                    drugImageUri,
+                    quantity
+                )
+                binding.cartRecyclerView.layoutManager =
+                    LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+                binding.cartRecyclerView.adapter = cartAdapter
             }
 
             override fun onCancelled(error: DatabaseError) {

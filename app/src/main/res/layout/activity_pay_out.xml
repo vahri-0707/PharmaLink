@@ -75,13 +75,14 @@
                     android:textSize="13sp"></TextView>
 
                 <EditText
+                    android:id="@+id/name"
                     android:layout_width="215dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:background="@android:color/transparent"
                     android:layout_marginLeft="17dp"
                     android:layout_marginTop="1dp"
                     android:layout_marginRight="20dp"
+                    android:background="@android:color/transparent"
                     android:fontFamily="@font/poppins_regular"
                     android:text="vhrimlna@gmail.com"
                     android:textAlignment="textEnd"
@@ -120,6 +121,7 @@
                     android:textSize="13sp"></TextView>
 
                 <EditText
+                    android:id="@+id/phone"
                     android:layout_width="215dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -165,6 +167,7 @@
                     android:textSize="13sp"></TextView>
 
                 <EditText
+                    android:id="@+id/address"
                     android:layout_width="198dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -251,6 +254,7 @@
                     android:textSize="13sp"></TextView>
 
                 <EditText
+                    android:id="@+id/totalAmount"
                     android:layout_width="198dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
