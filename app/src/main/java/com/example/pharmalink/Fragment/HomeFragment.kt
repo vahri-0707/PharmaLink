@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
@@ -88,13 +89,15 @@ class HomeFragment : Fragment() {
     private fun setPopularItemsAdapter(subsetMenuItems: List<MenuItem>) {
         val adapter = MenuAdapter(subsetMenuItems, requireContext())
 
-        // Use a GridLayoutManager with 2 columns
+        // Use a GridLayoutManager with 2 columns and vertical orientation
         val layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            GridLayoutManager(requireContext(), 2, GridLayoutManager.VERTICAL, false)
         binding.PopularRecyclerView.layoutManager = layoutManager
 
         binding.PopularRecyclerView.adapter = adapter
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
