@@ -70,6 +70,7 @@ class CartFragment : Fragment() {
         drugPrices = mutableListOf()
         drugImageUri = mutableListOf()
         quantity = mutableListOf()
+        drugDescriptions = mutableListOf()
 
         drugReference.addListenerForSingleValueEvent(object: ValueEventListener{
             override fun onDataChange(snapshot: DataSnapshot) {
