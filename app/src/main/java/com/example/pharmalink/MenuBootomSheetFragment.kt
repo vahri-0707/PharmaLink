@@ -27,6 +27,7 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment() {
         super.onCreate(savedInstanceState)
     }
 
+    // Inside onCreateView method
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,9 +42,14 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment() {
         // Use GridLayoutManager with 2 columns
         val layoutManager = GridLayoutManager(requireContext(), 2)
 
-        return binding.root
+        // Set the layout manager to the RecyclerView
+        binding.menuRecyclerView.layoutManager = layoutManager
 
+        Log.d("ITEMS", "onCreateView: Setting GridLayoutManager with 2 columns")
+
+        return binding.root
     }
+
 
     private fun retrieveMenuItems() {
         database = FirebaseDatabase.getInstance()
@@ -69,16 +75,20 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment() {
         })
     }
     private fun setAdapter() {
-        if (menuItems.isNotEmpty()){
+        if (menuItems.isNotEmpty()) {
             val adapter = MenuAdapter(menuItems, requireContext())
-            binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            // Use GridLayoutManager with 2 columns
+            val layoutManager = GridLayoutManager(requireContext(), 2)
+            binding.menuRecyclerView.layoutManager = layoutManager
+
             binding.menuRecyclerView.adapter = adapter
             Log.d("ITEMS", "setAdapter: data set")
-        } else{
-            Log.d("ITEMS", "setAdapter: data NOt set")
+        } else {
+            Log.d("ITEMS", "setAdapter: data not set")
         }
-
     }
+
 
     companion object {
 

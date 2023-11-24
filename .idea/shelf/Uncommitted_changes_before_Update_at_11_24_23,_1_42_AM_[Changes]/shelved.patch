@@ -1,0 +1,120 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_11_25_PM_[Changes]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_11_25_PM_[Changes]/shelved.patch b/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_11_25_PM_[Changes]/shelved.patch
+new file mode 100644
+--- /dev/null	(date 1700756748042)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_11_25_PM_[Changes]/shelved.patch	(date 1700756748042)
+@@ -0,0 +1,37 @@
++Index: app/google-services.json
++===================================================================
++diff --git a/app/google-services.json b/app/google-services.json
++deleted file mode 100644
++--- a/app/google-services.json	(revision f312958cf696e26a291e4fc4e969a17649b72b96)
+++++ /dev/null	(revision f312958cf696e26a291e4fc4e969a17649b72b96)
++@@ -1,29 +0,0 @@
++-{
++-  "project_info": {
++-    "project_number": "687692583488",
++-    "project_id": "pharmalink-96911",
++-    "storage_bucket": "pharmalink-96911.appspot.com"
++-  },
++-  "client": [
++-    {
++-      "client_info": {
++-        "mobilesdk_app_id": "1:687692583488:android:da4130e0c9c7be653105a5",
++-        "android_client_info": {
++-          "package_name": "com.example.pharmalink"
++-        }
++-      },
++-      "oauth_client": [],
++-      "api_key": [
++-        {
++-          "current_key": "AIzaSyBIzp3-oQN9MYJLZEqWuwxYhATCtE23LmA"
++-        }
++-      ],
++-      "services": {
++-        "appinvite_service": {
++-          "other_platform_oauth_client": []
++-        }
++-      }
++-    }
++-  ],
++-  "configuration_version": "1"
++-}
++\ No newline at end of file
+Index: app/google-services.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n{\n  \"project_info\": {\n    \"project_number\": \"330262394371\",\n    \"firebase_url\": \"https://pharmalinkadmin-default-rtdb.firebaseio.com\",\n    \"project_id\": \"pharmalinkadmin\",\n    \"storage_bucket\": \"pharmalinkadmin.appspot.com\"\n  },\n  \"client\": [\n    {\n      \"client_info\": {\n        \"mobilesdk_app_id\": \"1:330262394371:android:fdfc47676de248319d0036\",\n        \"android_client_info\": {\n          \"package_name\": \"com.example.pharmalink\"\n        }\n      },\n      \"oauth_client\": [],\n      \"api_key\": [\n        {\n          \"current_key\": \"AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY\"\n        }\n      ],\n      \"services\": {\n        \"appinvite_service\": {\n          \"other_platform_oauth_client\": []\n        }\n      }\n    },\n    {\n      \"client_info\": {\n        \"mobilesdk_app_id\": \"1:330262394371:android:73c3fe494b9b834d9d0036\",\n        \"android_client_info\": {\n          \"package_name\": \"com.example.pharmalinkadmin\"\n        }\n      },\n      \"oauth_client\": [],\n      \"api_key\": [\n        {\n          \"current_key\": \"AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY\"\n        }\n      ],\n      \"services\": {\n        \"appinvite_service\": {\n          \"other_platform_oauth_client\": []\n        }\n      }\n    }\n  ],\n  \"configuration_version\": \"1\"\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/google-services.json b/app/google-services.json
+--- a/app/google-services.json	(revision 15fce12b5d5dc8c7cb952dc080a7b5b32e43e5d1)
++++ b/app/google-services.json	(date 1700756824699)
+@@ -1,15 +1,13 @@
+-
+ {
+   "project_info": {
+-    "project_number": "330262394371",
+-    "firebase_url": "https://pharmalinkadmin-default-rtdb.firebaseio.com",
+-    "project_id": "pharmalinkadmin",
+-    "storage_bucket": "pharmalinkadmin.appspot.com"
++    "project_number": "687692583488",
++    "project_id": "pharmalink-96911",
++    "storage_bucket": "pharmalink-96911.appspot.com"
+   },
+   "client": [
+     {
+       "client_info": {
+-        "mobilesdk_app_id": "1:330262394371:android:fdfc47676de248319d0036",
++        "mobilesdk_app_id": "1:687692583488:android:da4130e0c9c7be653105a5",
+         "android_client_info": {
+           "package_name": "com.example.pharmalink"
+         }
+@@ -17,26 +15,7 @@
+       "oauth_client": [],
+       "api_key": [
+         {
+-          "current_key": "AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY"
+-        }
+-      ],
+-      "services": {
+-        "appinvite_service": {
+-          "other_platform_oauth_client": []
+-        }
+-      }
+-    },
+-    {
+-      "client_info": {
+-        "mobilesdk_app_id": "1:330262394371:android:73c3fe494b9b834d9d0036",
+-        "android_client_info": {
+-          "package_name": "com.example.pharmalinkadmin"
+-        }
+-      },
+-      "oauth_client": [],
+-      "api_key": [
+-        {
+-          "current_key": "AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY"
++          "current_key": "AIzaSyBIzp3-oQN9MYJLZEqWuwxYhATCtE23LmA"
+         }
+       ],
+       "services": {
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_11_23_23__11_25_PM__Changes_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23__11_25_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23__11_25_PM__Changes_.xml
+new file mode 100644
+--- /dev/null	(date 1700756993472)
++++ b/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23__11_25_PM__Changes_.xml	(date 1700756993472)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_11_23_23,_11_25_PM_[Changes]" date="1700756748321" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_11_25_PM_[Changes]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11/23/23, 11:25 PM [Changes]" />
++</changelist>
+\ No newline at end of file

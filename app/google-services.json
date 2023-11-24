@@ -1,4 +1,3 @@
-
 {
   "project_info": {
     "project_number": "330262394371",
@@ -14,7 +13,20 @@
           "package_name": "com.example.pharmalink"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "330262394371-obto6nl3rkdhqj8fh00dho24ec4tt7ru.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pharmalink",
+            "certificate_hash": "c40ac66da1f79afbf9dc9782443d1ed25e8caf09"
+          }
+        },
+        {
+          "client_id": "330262394371-2cmlbv6ju0nsia1g4d6ut73m8t788eik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY"
@@ -22,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330262394371-2cmlbv6ju0nsia1g4d6ut73m8t788eik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     },
@@ -33,7 +50,12 @@
           "package_name": "com.example.pharmalinkadmin"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "330262394371-2cmlbv6ju0nsia1g4d6ut73m8t788eik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCYSCkTR5GLo6VTm6rybkuZ_b31m_Fy-oY"
@@ -41,7 +63,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330262394371-2cmlbv6ju0nsia1g4d6ut73m8t788eik.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
