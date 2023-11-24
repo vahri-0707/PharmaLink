@@ -93,7 +93,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/addItemButton"
             style="@style/NoElevationButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
