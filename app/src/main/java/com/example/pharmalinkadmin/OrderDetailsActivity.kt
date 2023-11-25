@@ -29,9 +29,9 @@ class OrderDetailsActivity : AppCompatActivity() {
         //TOMBOL BACK BELUM DIBIKIN
 
 
-        //binding.backeButton.setOnClickListener{
-        //    finish()
-        //}
+        binding.backButton.setOnClickListener{
+            finish()
+        }
         getDataFromIntent()
     }
 
