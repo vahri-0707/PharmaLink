@@ -49,9 +49,11 @@ class PayOutActivity : AppCompatActivity() {
         drugItemDescription = intent.getStringArrayListExtra("DrugItemDescription") as ArrayList<String>
         drugItemQuantities = intent.getIntegerArrayListExtra("DrugItemQuantities") as ArrayList<Int>
 
-        totalAmount = calculateTotalAmount().toString() + "$"
-       // binding.totalAmount.isEnabled = false
-        binding.totalAmount.setText(totalAmount)
+        totalAmount = calculateTotalAmount().toString()
+
+        // binding.totalAmount.isEnabled = false
+        binding.totalAmount.setText("Rp. $totalAmount")
+
 
         binding.backeButton.setOnClickListener{
             finish()
@@ -65,19 +67,32 @@ class PayOutActivity : AppCompatActivity() {
 
     private fun calculateTotalAmount(): Int {
         var totalAmount = 0
-        for( i in 0 until drugItemPrice.size){
+
+        for (i in 0 until drugItemPrice.size) {
             var price = drugItemPrice[i]
-            val lastChar = price.last()
-            val priceIntVale = if (lastChar == '$'){
-                price.dropLast(1).toInt()
-            }else{
-                price.toInt()
+
+            // Replace '$' with 'Rp'
+            price = price.replace("$", "Rp")
+
+            // Remove 'Rp' if it occurs at the beginning
+            if (price.startsWith("Rp")) {
+                price = price.substring(2)
             }
-            var quantity = drugItemQuantities[i]
-            totalAmount += priceIntVale * quantity
+
+            // Now, convert the modified string to an integer
+            val priceIntValue = price.toIntOrNull() ?: 0
+
+            val quantity = drugItemQuantities[i]
+
+            totalAmount += priceIntValue * quantity
         }
+
         return totalAmount
     }
+
+
+
+
 
     private fun setUserData() {
         val user = auth.currentUser

@@ -44,7 +44,7 @@
 
         <TextView
             android:id="@+id/detailDrugName"
-            android:layout_width="wrap_content"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
@@ -56,37 +56,48 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/detailDrugPrice"
+            android:id="@+id/detailDrugPrice444"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
-            android:text="Rp. 20.000"
+            android:text="Rp. "
             android:textColor="@color/primary"
             android:textSize="23sp"
             app:layout_constraintStart_toStartOf="@+id/detailDrugName"
             app:layout_constraintTop_toBottomOf="@+id/detailDrugName" />
 
         <TextView
+            android:id="@+id/detailDrugPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="10"
+            android:textColor="@color/primary"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="@+id/detailDrugPrice444"
+            app:layout_constraintStart_toEndOf="@+id/detailDrugPrice444"
+            app:layout_constraintTop_toTopOf="@+id/detailDrugPrice444" />
+
+        <TextView
             android:id="@+id/textView16"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="About the Product"
             android:textColor="@color/textcolor"
             android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/detailDrugPrice"
-            app:layout_constraintTop_toBottomOf="@+id/detailDrugPrice" />
+            app:layout_constraintStart_toStartOf="@+id/detailDrugPrice444"
+            app:layout_constraintTop_toBottomOf="@+id/detailDrugPrice444" />
 
         <TextView
             android:id="@+id/detailDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="24dp"
-            android:gravity="left"
             android:layout_marginTop="5dp"
-            android:text="loremawdawdawdawdawdawdadwawdwdawdawdawdawdawdawdawdawdawd."
             android:fontFamily="@font/poppins_regular"
+            android:gravity="left"
+            android:paddingHorizontal="24dp"
+            android:text="loremawdawdawdawdawdawdadwawdwdawdawdawdawdawdawdawdawdawd."
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
