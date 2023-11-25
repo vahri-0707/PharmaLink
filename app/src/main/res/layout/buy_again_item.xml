@@ -9,7 +9,7 @@
         android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginHorizontal="24dp"
         android:background="@drawable/shape_historycard"
         app:cardElevation="0dp"
@@ -40,7 +40,7 @@
                 android:id="@+id/buyAgainDrugName"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Paracetamoloolololokokokokoko"
@@ -50,16 +50,28 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/buyAgainDrugPrice"
+                android:id="@+id/buyAgainDrugPricee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Rp. 5000"
+                android:text="Rp. "
                 android:textColor="@color/primary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/buyAgainDrugName"
                 app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugName" />
+
+            <TextView
+                android:id="@+id/buyAgainDrugPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Rp. "
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/buyAgainDrugPricee"
+                app:layout_constraintStart_toEndOf="@+id/buyAgainDrugPricee"
+                app:layout_constraintTop_toTopOf="@+id/buyAgainDrugPricee" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buyAgainDrugButton"
@@ -77,7 +89,7 @@
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/buyAgainDrugPrice"
+                app:layout_constraintStart_toStartOf="@+id/buyAgainDrugPricee"
                 app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugPrice" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 

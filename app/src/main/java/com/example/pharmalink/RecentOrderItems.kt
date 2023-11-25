@@ -21,6 +21,10 @@ class RecentOrderItems : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.buttonBackToHistoryy.setOnClickListener{
+            finish()
+        }
+
 
         val recentOrderItems = intent.getSerializableExtra("RecentBuyOrderItem") as ArrayList<OrderDetails>?
         recentOrderItems?.let { orderDetails ->

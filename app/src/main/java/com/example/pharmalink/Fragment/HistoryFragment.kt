@@ -104,7 +104,9 @@ class HistoryFragment : Fragment() {
 
             with(binding) {
                 buyAgainDrugName.text = "${it.drugNames?.joinToString(", ") ?: ""}"
-                buyAgainDrugPrice.text = "Total: Rp. $totalAmount"
+
+                // Convert totalAmount to a string and remove trailing .0
+                buyAgainDrugPrice.text = "Total : Rp. ${totalAmount.stripTrailingZeros().toPlainString()}"
 
                 val image = it.drugImages?.firstOrNull() ?: ""
                 val uri = Uri.parse(image)
@@ -112,6 +114,7 @@ class HistoryFragment : Fragment() {
             }
         }
     }
+
 
     private fun calculateTotalAmount(orderDetails: OrderDetails): BigDecimal {
         return orderDetails.drugPrices?.map {
