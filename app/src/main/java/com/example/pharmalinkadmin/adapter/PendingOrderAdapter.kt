@@ -1,19 +1,26 @@
 package com.example.pharmalinkadmin.adapter
 
-import android.content.Context
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.pharmalinkadmin.PendingOrderActivity
 import com.example.pharmalinkadmin.databinding.PendingOrderItemBinding
 
 
 class PendingOrderAdapter(
-    private val customerNames: ArrayList<String>,
-    private val quantity: ArrayList<String>,
-    private val drugImage: ArrayList<Int>,
-    private val context: Context
+    private val context: PendingOrderActivity,
+    private val customerNames: MutableList<String>,
+    private val quantity: MutableList<String>,
+    private val drugImage: MutableList<String>,
+    private val itemClicked: OnItemClicked
 ) : RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>() {
+
+    interface OnItemClicked{
+        fun onItemClickListener(position: Int)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PendingOrderViewHolder {
         val binding =
@@ -37,7 +44,9 @@ class PendingOrderAdapter(
             binding.apply {
                 customerName.text = customerNames[position]
                 pendingOrderQuantity.text = quantity[position]
-                orderDrugImage.setImageResource(drugImage[position])
+                var uriString = drugImage[position]
+                var uri = Uri.parse(uriString)
+                Glide.with(context).load(uri).into(orderDrugImage)
 
                 orderedAcceptButton.apply {
                     if (!isAccepted) {
@@ -59,6 +68,9 @@ class PendingOrderAdapter(
                     }
 
                 }
+                itemView.setOnClickListener{
+                    itemClicked.onItemClickListener(position)
+                }
 
             }
 
@@ -66,7 +78,12 @@ class PendingOrderAdapter(
 
         private fun showToast(message: String) {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+
         }
 
     }
+}
+
+fun PendingOrderAdapter.OnItemClicked.onItemClickListener(position: Int) {
+    TODO("Not yet implemented")
 }
