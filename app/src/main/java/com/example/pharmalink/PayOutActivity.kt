@@ -3,8 +3,10 @@ package com.example.pharmalink
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.pharmalink.Fragment.CartFragment
 import com.example.pharmalink.databinding.ActivityPayOutBinding
+import com.example.pharmalink.model.OrderDetails
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -60,9 +62,47 @@ class PayOutActivity : AppCompatActivity() {
         }
 
         binding.PlaceMyOrder.setOnClickListener{
-            val bottomSheetDeialog = CongratsBottomSheet()
-            bottomSheetDeialog.show(supportFragmentManager, "Test")
+            name = binding.name.text.toString().trim()
+            phone = binding.phone.text.toString().trim()
+            address = binding.address.text.toString().trim()
+
+            if (name.isBlank() && phone.isBlank() && address.isBlank()){
+                Toast.makeText(this, "Please Enter All The Details", Toast.LENGTH_SHORT).show()
+            }else{
+                placeOrder()
+            }
+
         }
+    }
+
+    private fun placeOrder() {
+        userId = auth.currentUser?.uid?:""
+        val time = System.currentTimeMillis()
+        val itemPushKey = databaseReference.child("OrderDetails").push().key
+        val orderDetails = OrderDetails(userId, name, drugItemName, drugItemPrice, drugItemImage, drugItemQuantities, address, totalAmount,  phone, time, itemPushKey, false,false)
+        val orderReference = databaseReference.child("OrderDetails").child(itemPushKey!!)
+        orderReference.setValue(orderDetails).addOnSuccessListener {
+            val bottomSheetDialog = CongratsBottomSheet()
+            bottomSheetDialog.show(supportFragmentManager, "Test")
+            removeItemFromCart()
+            addOrderToHistory(orderDetails)
+        }
+            .addOnFailureListener{
+                Toast.makeText(this, "failed to order", Toast.LENGTH_SHORT).show()
+            }
+    }
+
+    private fun addOrderToHistory(orderDetails: OrderDetails) {
+        databaseReference.child("user").child(userId).child("BuyHistory")
+            .child(orderDetails.itemPushKey!!)
+            .setValue(orderDetails).addOnSuccessListener {
+
+            }
+    }
+
+    private fun removeItemFromCart() {
+        val cartItemsReference = databaseReference.child("user").child(userId).child("CartItems")
+        cartItemsReference.removeValue()
     }
 
     private fun calculateTotalAmount(): Int {
@@ -89,10 +129,6 @@ class PayOutActivity : AppCompatActivity() {
 
         return totalAmount
     }
-
-
-
-
 
     private fun setUserData() {
         val user = auth.currentUser
