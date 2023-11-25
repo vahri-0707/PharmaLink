@@ -10,16 +10,23 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/cartRecyclerView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginHorizontal="24dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_cart"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="24dp"
+            tools:layout_editor_absoluteX="24dp"
+            tools:layout_editor_absoluteY="82dp" />
+
+    </ScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/nav_cart"
@@ -35,15 +42,15 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cart_bottomnav"
             style="@style/NoElevationButton"
-            android:elevation="0dp"
             android:layout_width="match_parent"
             android:layout_height="46dp"
             android:layout_marginHorizontal="24dp"
             android:background="@drawable/shape_proceedbutton"
             android:backgroundTint="@color/primary"
+            android:elevation="0dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Proceed to Checkout"
             android:paddingTop="3dp"
+            android:text="Proceed to Checkout"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="17sp"
@@ -54,27 +61,40 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="My Cart"
-        android:textSize="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/buttonBackToHome"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginLeft="24dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="My Cart"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/buttonBackToHome"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

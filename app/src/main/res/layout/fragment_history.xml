@@ -7,149 +7,167 @@
     android:background="@color/background"
     tools:context=".Fragment.HistoryFragment">
 
-    <TextView
-        android:id="@+id/textView123"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Order History"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/buttonBackToHomee"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginLeft="20dp"
-        android:src="@drawable/ic_back"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/constraintLayout4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView123">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/textView123"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Recent Buy"
-            android:textColor="@color/textcolor"
-            android:textSize="18dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Order History"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/BuyAgainRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:layout_constraintBottom_toBottomOf="@id/constraintLayout3"
-            app:layout_constraintEnd_toEndOf="parent"
+        <ImageView
+            android:id="@+id/buttonBackToHomee"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginVertical="29dp"
+            android:layout_marginLeft="24dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/shape_historycard"
-            app:cardElevation="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/recentbuyitem"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape_historycard">
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/buyAgainDrugImage"
-                    android:layout_width="90dp"
-                    android:layout_height="90dp"
-                    android:layout_marginStart="14dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/medicine_paracetamol"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:shapeAppearanceOverlay="@style/RoundedSquare" />
-
-                <TextView
-                    android:id="@+id/buyAgainDrugName"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Paracetamollololololololololoadawdawd"
-                    android:textColor="@color/textcolor"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/buyAgainDrugImage"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/buyAgainDrugPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="0dp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Rp. 5000"
-                    android:textColor="@color/primary"
-                    android:textSize="16sp"
-                    app:layout_constraintStart_toStartOf="@+id/buyAgainDrugName"
-                    app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugName" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="7dp"
-                    android:layout_marginBottom="16dp"
-                    android:background="@drawable/shape_progess"
-                    android:elevation="0dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:gravity="center"
-                    android:paddingHorizontal="10dp"
-                    android:text="On Progress"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="14sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/buyAgainDrugPrice"
-                    app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugPrice" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="18dp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Recent Buy"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Recent Buy"
+                android:layout_marginLeft="24dp"
+                android:textColor="@color/textcolor"
+                android:textSize="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/shape_historycard"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/recentbuyitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_historycard">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/buyAgainDrugImage"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="14dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/medicine_paracetamol"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/RoundedSquare" />
+
+                    <TextView
+                        android:id="@+id/buyAgainDrugName"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Paracetamollololololololololoadawdawd"
+                        android:textColor="@color/textcolor"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/buyAgainDrugImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/buyAgainDrugPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Rp. 5000"
+                        android:textColor="@color/primary"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="@+id/buyAgainDrugName"
+                        app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugName" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/shape_progess"
+                        android:elevation="0dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:text="On Progress"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/buyAgainDrugPrice"
+                        app:layout_constraintTop_toBottomOf="@+id/buyAgainDrugPrice" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/BuyAgainRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="100dp"
+                app:layout_constraintBottom_toBottomOf="@id/constraintLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Recent Buy"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
