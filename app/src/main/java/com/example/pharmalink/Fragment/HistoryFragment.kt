@@ -10,12 +10,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.pharmalink.MainActivity
-import com.example.pharmalink.PayOutActivity
-import com.example.pharmalink.R
 import com.example.pharmalink.adapter.BuyAgainAdapter
 import com.example.pharmalink.databinding.FragmentHistoryBinding
 import com.example.pharmalink.model.OrderDetails
-import com.example.pharmalink.recentOrderItems
+import com.example.pharmalink.RecentOrderItems
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -29,7 +27,7 @@ class HistoryFragment : Fragment() {
     private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
     private lateinit var userId: String
-    private var listOfOrderItem: MutableList<OrderDetails> = mutableListOf()
+    private var listOfOrderItem: ArrayList<OrderDetails> = arrayListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,8 +60,8 @@ class HistoryFragment : Fragment() {
 
     private fun seeItemsRecentBuy() {
         listOfOrderItem.firstOrNull()?.let { recentBuy ->
-            val intent = Intent(requireContext(), recentOrderItems::class.java)
-            intent.putExtra("RecentBuyOrderItem", recentBuy)
+            val intent = Intent(requireContext(), RecentOrderItems::class.java)
+            intent.putExtra("RecentBuyOrderItem", listOfOrderItem)
             startActivity(intent)
         }
     }
