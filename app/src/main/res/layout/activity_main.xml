@@ -41,7 +41,7 @@
             android:padding="1dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/Circular"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
             app:srcCompat="@drawable/img_profil"
             app:strokeColor="@color/white"
             app:strokeWidth="2.5dp" />
