@@ -59,11 +59,9 @@ class HistoryFragment : Fragment() {
     }
 
     private fun seeItemsRecentBuy() {
-        listOfOrderItem.firstOrNull()?.let { recentBuy ->
-            val intent = Intent(requireContext(), RecentOrderItems::class.java)
-            intent.putExtra("RecentBuyOrderItem", listOfOrderItem)
-            startActivity(intent)
-        }
+        val intent = Intent(requireContext(), RecentOrderItems::class.java)
+        intent.putExtra("RecentBuyOrderItem", listOfOrderItem)
+        startActivity(intent)
     }
 
     private fun retrieveBuyHistory() {
@@ -101,19 +99,13 @@ class HistoryFragment : Fragment() {
         val recentOrderItem = listOfOrderItem.firstOrNull()
         recentOrderItem?.let {
             with(binding) {
-                buyAgainDrugName.text = it.drugNames?.firstOrNull() ?: ""
-                buyAgainDrugPrice.text = it.drugPrices?.firstOrNull() ?: ""
+                buyAgainDrugName.text = it.drugNames?.joinToString(", ") ?: ""
+                buyAgainDrugPrice.text = it.drugPrices?.joinToString(", ") ?: ""
                 val image = it.drugImages?.firstOrNull() ?: ""
                 val uri = Uri.parse(image)
                 Glide.with(requireContext()).load(uri).into(buyAgainDrugImage)
-
-                listOfOrderItem.reverse()
-                if (listOfOrderItem.isNotEmpty()) {
-
-                }
             }
         }
-
     }
 
     private fun setPreviousBuyItemRecyclerView() {
