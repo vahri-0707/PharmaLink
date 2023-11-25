@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="190dp"
+        android:layout_height="240dp"
+        android:layout_marginRight="16dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardElevation="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_card">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/drugImage"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="10dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/RoundedSquare"/>
+
+            <TextView
+                android:id="@+id/drugName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stuff Name"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintStart_toStartOf="@+id/drugPrice"
+                app:layout_constraintTop_toBottomOf="@+id/drugPrice" />
+
+            <TextView
+                android:id="@+id/drugPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:text="Rp. 15000"
+                android:textSize="16sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/poppins_semibold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/drugImage" />
+
+            <TextView
+                android:id="@+id/textViewQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity:"
+                app:layout_constraintEnd_toEndOf="@+id/drugName"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/drugName"
+                app:layout_constraintTop_toBottomOf="@+id/drugName" />
+
+            <TextView
+                android:id="@+id/drugQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="8"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewQuantity"
+                app:layout_constraintStart_toEndOf="@+id/textViewQuantity"
+                app:layout_constraintTop_toTopOf="@+id/textViewQuantity" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

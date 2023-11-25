@@ -73,6 +73,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView12">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/recentbuyitem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/shape_historycard">
@@ -121,9 +122,9 @@
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/shape_progess"
                     android:elevation="0dp"
-                    android:paddingHorizontal="10dp"
                     android:fontFamily="@font/poppins_medium"
                     android:gravity="center"
+                    android:paddingHorizontal="10dp"
                     android:text="On Progress"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
