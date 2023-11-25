@@ -42,15 +42,41 @@ class PayOutActivity : AppCompatActivity() {
 
         setUserData()
 
-        binding.buttonBackToCart.setOnClickListener{
-            val intent = Intent(this, CartFragment::class.java)
-            startActivity(intent)
+        val intent = intent
+        drugItemName = intent.getStringArrayListExtra("DrugItemName") as ArrayList<String>
+        drugItemPrice= intent.getStringArrayListExtra("DrugItemPrice") as ArrayList<String>
+        drugItemImage = intent.getStringArrayListExtra("DrugItemImage") as ArrayList<String>
+        drugItemDescription = intent.getStringArrayListExtra("DrugItemDescription") as ArrayList<String>
+        drugItemQuantities = intent.getIntegerArrayListExtra("DrugItemQuantities") as ArrayList<Int>
+
+        totalAmount = calculateTotalAmount().toString() + "$"
+       // binding.totalAmount.isEnabled = false
+        binding.totalAmount.setText(totalAmount)
+
+        binding.backeButton.setOnClickListener{
+            finish()
         }
 
         binding.PlaceMyOrder.setOnClickListener{
             val bottomSheetDeialog = CongratsBottomSheet()
             bottomSheetDeialog.show(supportFragmentManager, "Test")
         }
+    }
+
+    private fun calculateTotalAmount(): Int {
+        var totalAmount = 0
+        for( i in 0 until drugItemPrice.size){
+            var price = drugItemPrice[i]
+            val lastChar = price.last()
+            val priceIntVale = if (lastChar == '$'){
+                price.dropLast(1).toInt()
+            }else{
+                price.toInt()
+            }
+            var quantity = drugItemQuantities[i]
+            totalAmount += priceIntVale * quantity
+        }
+        return totalAmount
     }
 
     private fun setUserData() {
