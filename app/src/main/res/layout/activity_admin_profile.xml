@@ -7,41 +7,51 @@
     android:background="@color/darkbackground"
     tools:context=".AdminProfileActivity">
 
-    <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="29dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Admin Profile"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topprof"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Admin Profile"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView5"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="52dp"
         android:padding="3dp"
         android:scaleType="centerCrop"
         android:src="@drawable/banner_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/topprof"
         app:shapeAppearanceOverlay="@style/Circular"
         app:strokeColor="@color/primary"
         app:strokeWidth="4dp" />
@@ -288,16 +298,19 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/saveInformation"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
+        android:id="@+id/logoutButton"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@color/primary"
+        android:backgroundTint="@color/darkbackground"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="1.5dp"
         android:fontFamily="@font/poppins_bold"
         android:paddingTop="6dp"
-        android:text="Save Information"
+        android:text="Logout"
         android:textSize="16sp"
         app:cornerRadius="7dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -306,15 +319,33 @@
 
     </com.google.android.material.button.MaterialButton>
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveInformation"
+        android:layout_width="345dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="24dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingTop="6dp"
+        android:text="Save Information"
+        android:textSize="16sp"
+        app:cornerRadius="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoutButton">
+
+    </com.google.android.material.button.MaterialButton>
+
     <TextView
         android:id="@+id/editButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="24dp"
         android:background="@drawable/shape_edit"
         android:fontFamily="@font/poppins_semibold"
         android:paddingHorizontal="6dp"
         android:paddingVertical="2dp"
-        android:layout_marginRight="24dp"
         android:text="Edit Information"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/textView16"

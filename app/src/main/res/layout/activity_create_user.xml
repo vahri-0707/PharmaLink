@@ -7,28 +7,40 @@
     android:background="@color/darkbackground"
     tools:context=".CreateUserActivity">
 
-    <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="29dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Admin Profile"
-        android:textColor="@color/white"
-        android:textSize="20dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topcreate"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="29dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Admin Profile"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 
     <TextView
@@ -181,13 +193,13 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="230dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="14dp"
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="-12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22"
+        app:layout_constraintTop_toBottomOf="@+id/topcreate"
         app:srcCompat="@drawable/ill_newadmin" />
 
 
