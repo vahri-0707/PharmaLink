@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import java.math.BigDecimal
 
 class HistoryFragment : Fragment() {
     private lateinit var binding: FragmentHistoryBinding
@@ -97,16 +98,29 @@ class HistoryFragment : Fragment() {
     private fun setDataInRecentBuyItem() {
         binding.recentbuyitem.visibility = View.VISIBLE
         val recentOrderItem = listOfOrderItem.firstOrNull()
+
         recentOrderItem?.let {
+            val totalAmount = calculateTotalAmount(it)
+
             with(binding) {
-                buyAgainDrugName.text = it.drugNames?.joinToString(", ") ?: ""
-                buyAgainDrugPrice.text = it.drugPrices?.joinToString(", ") ?: ""
+                buyAgainDrugName.text = "${it.drugNames?.joinToString(", ") ?: ""}"
+                buyAgainDrugPrice.text = "Total: Rp. $totalAmount"
+
                 val image = it.drugImages?.firstOrNull() ?: ""
                 val uri = Uri.parse(image)
                 Glide.with(requireContext()).load(uri).into(buyAgainDrugImage)
             }
         }
     }
+
+    private fun calculateTotalAmount(orderDetails: OrderDetails): BigDecimal {
+        return orderDetails.drugPrices?.map {
+            it.replace("Rp. ", "").replace(",", "").toDoubleOrNull() ?: 0.0
+        }?.let {
+            it.sumOf { price -> BigDecimal.valueOf(price) }
+        } ?: BigDecimal.ZERO
+    }
+
 
     private fun setPreviousBuyItemRecyclerView() {
         val buyAgainDrugName = mutableListOf<String>()
