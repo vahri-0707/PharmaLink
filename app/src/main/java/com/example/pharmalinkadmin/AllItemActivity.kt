@@ -3,6 +3,7 @@ package com.example.pharmalinkadmin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pharmalinkadmin.adapter.MenuItemAdapter
 import com.example.pharmalinkadmin.databinding.ActivityAllItemBinding
@@ -63,9 +64,25 @@ class AllItemActivity : AppCompatActivity() {
     }
 
     private fun setAdapter() {
-        val adapter = MenuItemAdapter(this@AllItemActivity, menuItems, databaseReference)
+        val adapter = MenuItemAdapter(this@AllItemActivity, menuItems, databaseReference){ position ->
+            deleteMenuItems(position)
+        }
         binding.MenuRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.MenuRecyclerView.adapter = adapter
+    }
+
+    private fun deleteMenuItems(position: Int) {
+        val menuItemToDelete = menuItems[position]
+        val menuItemKey = menuItemToDelete.key
+        val drugMenuReference = database.reference.child("menu").child(menuItemKey!!)
+        drugMenuReference.removeValue().addOnCompleteListener { task ->
+            if (task.isSuccessful){
+                menuItems.removeAt(position)
+                binding.MenuRecyclerView.adapter?.notifyItemRemoved(position)
+            }else{
+                Toast.makeText(this, "Item not deleted", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
 }

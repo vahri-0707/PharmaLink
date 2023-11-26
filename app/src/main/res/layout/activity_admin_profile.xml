@@ -335,7 +335,7 @@
     </com.google.android.material.button.MaterialButton>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/saveInformation"
+        android:id="@+id/saveInfoButton"
         android:layout_width="345dp"
         android:layout_height="52dp"
         android:layout_marginTop="12dp"
