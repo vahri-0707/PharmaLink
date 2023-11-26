@@ -12,13 +12,15 @@ import com.example.pharmalinkadmin.databinding.PendingOrderItemBinding
 
 class PendingOrderAdapter(
     private val context: PendingOrderActivity,
-    private val customerNames: MutableList<String>,
-    private val quantity: MutableList<String>,
-    private val drugImage: MutableList<String>,
+    private val listOfName: MutableList<String>,
+    private val listOfTotalPrice: MutableList<String>,
+    private val listOfImageFirstDrugOrder: MutableList<String>,
     private val itemClicked: OnItemClicked
 ) : RecyclerView.Adapter<PendingOrderAdapter.PendingOrderViewHolder>() {
 
-    interface OnItemClicked{
+    private val acceptedStatusList: MutableList<Boolean> = MutableList(listOfName.size) { false }
+
+    interface OnItemClicked {
         fun onItemClickListener(position: Int)
         fun onItemAcceptClickListener(position: Int)
         fun onItemDispatchClickListener(position: Int)
@@ -34,56 +36,54 @@ class PendingOrderAdapter(
         holder.bind(position)
     }
 
-    override fun getItemCount(): Int = customerNames.size
+    override fun getItemCount(): Int = listOfName.size
 
     inner class PendingOrderViewHolder(private val binding: PendingOrderItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        private var isAccepted = false
-
         fun bind(position: Int) {
 
             binding.apply {
-                customerName.text = customerNames[position]
-                pendingOrderQuantity.text = quantity[position]
-                var uriString = drugImage[position]
-                var uri = Uri.parse(uriString)
+                customerName.text = listOfName[position]
+                pendingOrderQuantity.text = listOfTotalPrice[position]
+                val uriString = listOfImageFirstDrugOrder[position]
+                val uri = Uri.parse(uriString)
                 Glide.with(context).load(uri).into(orderDrugImage)
 
                 orderedAcceptButton.apply {
-                    if (!isAccepted) {
+                    if (!acceptedStatusList[position]) {
                         text = "Accept"
                     } else {
                         text = "Dispatch"
                     }
 
                     setOnClickListener {
-                        if (!isAccepted) {
+                        if (!acceptedStatusList[position]) {
                             text = "Dispatch"
-                            isAccepted = true
+                            acceptedStatusList[position] = true
                             showToast("Order is accepted")
                             itemClicked.onItemAcceptClickListener(position)
                         } else {
-                            customerNames.removeAt(adapterPosition)
-                            notifyItemRemoved(adapterPosition)
+                            listOfName.removeAt(position)
+                            listOfTotalPrice.removeAt(position)
+                            listOfImageFirstDrugOrder.removeAt(position)
+                            acceptedStatusList.removeAt(position)
+                            notifyItemRemoved(position)
                             showToast("Order is dispatched")
                             itemClicked.onItemDispatchClickListener(position)
                         }
                     }
-
                 }
-                itemView.setOnClickListener{
+
+                itemView.setOnClickListener {
                     itemClicked.onItemClickListener(position)
                 }
-
             }
-
         }
 
         private fun showToast(message: String) {
             Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
-
         }
-
     }
 }
+
