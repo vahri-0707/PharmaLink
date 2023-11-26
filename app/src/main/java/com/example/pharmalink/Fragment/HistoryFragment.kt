@@ -1,6 +1,7 @@
 package com.example.pharmalink.Fragment
 
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,10 +11,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.pharmalink.MainActivity
+import com.example.pharmalink.RecentOrderItems
 import com.example.pharmalink.adapter.BuyAgainAdapter
 import com.example.pharmalink.databinding.FragmentHistoryBinding
 import com.example.pharmalink.model.OrderDetails
-import com.example.pharmalink.RecentOrderItems
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -56,7 +57,17 @@ class HistoryFragment : Fragment() {
             startActivity(intent)
         }
 
+        binding.receivedButton.setOnClickListener{
+            updateOrdefStatus()
+        }
+
         return binding.root
+    }
+
+    private fun updateOrdefStatus() {
+        val itemPushKey = listOfOrderItem[0].itemPushKey
+        val completeOrderReference = database.reference.child("CompletedOrder").child(itemPushKey!!)
+        completeOrderReference.child("paymentReceived").setValue(true)
     }
 
     private fun seeItemsRecentBuy() {
@@ -111,6 +122,12 @@ class HistoryFragment : Fragment() {
                 val image = it.drugImages?.firstOrNull() ?: ""
                 val uri = Uri.parse(image)
                 Glide.with(requireContext()).load(uri).into(buyAgainDrugImage)
+
+                val isOrderIsAccepted = listOfOrderItem[0].orderAccepted
+                if (isOrderIsAccepted){
+                    orderedStatus.background.setTint(Color.GREEN)
+                    receivedButton.visibility = View.VISIBLE
+                }
             }
         }
     }
