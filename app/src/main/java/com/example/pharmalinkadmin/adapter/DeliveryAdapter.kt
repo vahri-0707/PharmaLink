@@ -7,14 +7,17 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pharmalinkadmin.databinding.DeliveryItemBinding
 
-class DeliveryAdapter(private val customerNames:ArrayList<String>, private val moneyStatus:ArrayList<String>): RecyclerView.Adapter<DeliveryAdapter.DeliveryViewHolder>() {
+class DeliveryAdapter(
+    private val customerNames: MutableList<String>,
+    private val moneyStatus: MutableList<Boolean>
+) : RecyclerView.Adapter<DeliveryAdapter.DeliveryViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeliveryViewHolder {
-        val binding = DeliveryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            DeliveryItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return DeliveryViewHolder(binding)
     }
-
 
 
     override fun onBindViewHolder(holder: DeliveryViewHolder, position: Int) {
@@ -22,17 +25,25 @@ class DeliveryAdapter(private val customerNames:ArrayList<String>, private val m
     }
 
     override fun getItemCount(): Int = customerNames.size
-    inner class DeliveryViewHolder(private val binding: DeliveryItemBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class DeliveryViewHolder(private val binding: DeliveryItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
-        binding.apply {
-            customerName.text=customerNames[position]
-            statusMoney.text=moneyStatus[position]
-            val colorMap = mapOf(
-                "Recieved" to Color.GREEN, "Not Recieved" to Color.RED, "Pending" to Color.BLUE
-            )
-            statusMoney.setTextColor(colorMap[moneyStatus[position]]?:Color.BLACK)
-            statusColor.backgroundTintList = ColorStateList.valueOf(colorMap[moneyStatus[position]]?:Color.BLACK)
-        }
+            binding.apply {
+                customerName.text = customerNames[position]
+
+                if (moneyStatus[position] == true){
+                    statusMoney.text = "Recieved"
+                }else{
+                    statusMoney.text = "Not Received"
+                }
+
+                val colorMap = mapOf(
+                    true to Color.GREEN, false to Color.RED
+                )
+                statusMoney.setTextColor(colorMap[moneyStatus[position]] ?: Color.BLACK)
+                statusColor.backgroundTintList =
+                    ColorStateList.valueOf(colorMap[moneyStatus[position]] ?: Color.BLACK)
+            }
         }
 
     }
