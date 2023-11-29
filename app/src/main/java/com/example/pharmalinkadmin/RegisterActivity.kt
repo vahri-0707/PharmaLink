@@ -88,4 +88,5 @@ class RegisterActivity : AppCompatActivity() {
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
         database.child("user").child(userId).setValue(user)
     }
+
 }
