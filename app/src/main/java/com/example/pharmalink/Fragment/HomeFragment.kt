@@ -20,6 +20,8 @@ import com.example.pharmalink.adapter.MenuAdapter
 import com.example.pharmalink.adapter.PopularAdapter
 import com.example.pharmalink.databinding.FragmentHomeBinding
 import com.example.pharmalink.model.MenuItem
+import com.example.pharmalink.model.UserModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
@@ -42,8 +44,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentHomeBinding.inflate(layoutInflater)
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
         binding.notificationButton.setOnClickListener {
             val bottomSheetDialog = Notification_Bottom_Fragmet()
             bottomSheetDialog.show(parentFragmentManager, "Test")
@@ -57,8 +59,34 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+
     private fun retrieveAndDisplayPopularItems() {
         database = FirebaseDatabase.getInstance()
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+
+        // Retrieve user data
+        val userRef: DatabaseReference = database.reference.child("user").child(userId!!)
+        userRef.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val user = snapshot.getValue(UserModel::class.java)
+                user?.let {
+                    // Set the user's name to the TextView with ID "name"
+                    binding.name.text = "${it.name}"
+                }
+
+                // Now that you have the user's name, proceed to load and display other data
+                loadAndDisplayOtherData()
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Handle error
+            }
+        })
+    }
+
+    private fun loadAndDisplayOtherData() {
+        // Continue with the rest of your code to load and display other data...
+        // For example, load and display popular items in the RecyclerView
         val drugRef: DatabaseReference = database.reference.child("menu")
         menuItems = mutableListOf()
 
@@ -72,9 +100,8 @@ class HomeFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                // Handle error
             }
-
         })
     }
 
