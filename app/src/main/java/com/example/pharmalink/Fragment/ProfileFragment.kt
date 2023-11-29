@@ -19,6 +19,8 @@ import com.google.firebase.database.*
 import com.google.firebase.storage.FirebaseStorage
 import java.io.IOException
 import com.bumptech.glide.Glide
+import com.example.pharmalink.RegisterActivity
+import com.example.pharmalink.SplashScreen
 
 
 class ProfileFragment : Fragment() {
@@ -60,6 +62,13 @@ class ProfileFragment : Fragment() {
 
             updateUserData(name, email, phone, address)
         }
+
+        binding.buttonLogout.setOnClickListener {
+            auth.signOut()
+            startActivity(Intent(requireContext(), SplashScreen::class.java))
+            requireActivity().finish()
+        }
+
     }
 
     private fun openImagePicker() {

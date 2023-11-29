@@ -85,12 +85,12 @@ class RegisterActivity : AppCompatActivity() {
                             startActivity(Intent(this, MainActivity::class.java))
                             finish()
                         } else {
-                            Toast.makeText(this, "Sign in field", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this, "Sign in failed", Toast.LENGTH_SHORT).show()
                         }
                     }
                 }
             } else {
-                Toast.makeText(this, "Sign in field", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Sign in failed", Toast.LENGTH_SHORT).show()
             }
         }
 
