@@ -1,15 +1,12 @@
 package com.example.pharmalink.Fragment
 
 import android.os.Bundle
-import android.os.TestLooperManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
@@ -17,7 +14,6 @@ import com.example.pharmalink.MenuBootomSheetFragment
 import com.example.pharmalink.Notification_Bottom_Fragmet
 import com.example.pharmalink.R
 import com.example.pharmalink.adapter.MenuAdapter
-import com.example.pharmalink.adapter.PopularAdapter
 import com.example.pharmalink.databinding.FragmentHomeBinding
 import com.example.pharmalink.model.MenuItem
 import com.example.pharmalink.model.UserModel
@@ -27,6 +23,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import androidx.appcompat.widget.SearchView
 
 
 class HomeFragment : Fragment() {
@@ -34,10 +31,7 @@ class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
     private lateinit var database: FirebaseDatabase
     private lateinit var menuItems: MutableList<MenuItem>
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    private lateinit var originalMenuItems: List<MenuItem>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -55,9 +49,44 @@ class HomeFragment : Fragment() {
             bottomSheetDialog.show(parentFragmentManager, "Test")
         }
 
+        // Setup the SearchView
+        setupSearchView()
+
         retrieveAndDisplayPopularItems()
         return binding.root
     }
+
+    private fun setupSearchView() {
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                // Perform search
+                performSearch(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                // Perform search as the user types
+                performSearch(newText)
+                return true
+            }
+        })
+    }
+
+    private fun performSearch(query: String?) {
+        if (query.isNullOrBlank()) {
+            // If the query is null or blank, show all items
+            setPopularItemsAdapter(originalMenuItems)
+        } else {
+            // Filter items based on the query (case-insensitive and search in the middle)
+            val filteredItems = originalMenuItems.filter {
+                it.drugName?.toLowerCase()?.contains(query.toLowerCase()) == true
+            }
+            setPopularItemsAdapter(filteredItems)
+        }
+    }
+
+
+
 
 
     private fun retrieveAndDisplayPopularItems() {
@@ -96,6 +125,10 @@ class HomeFragment : Fragment() {
                     val menuItem = drugSnapshot.getValue(MenuItem::class.java)
                     menuItem?.let { menuItems.add(it) }
                 }
+
+                // Save the original menu items for later use in search
+                originalMenuItems = menuItems.toList()
+
                 randomPopularItems()
             }
 
@@ -124,8 +157,6 @@ class HomeFragment : Fragment() {
         binding.PopularRecyclerView.adapter = adapter
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val imageList = ArrayList<SlideModel>()
@@ -139,7 +170,7 @@ class HomeFragment : Fragment() {
 
         imageSlider.setItemClickListener(object : ItemClickListener {
             override fun doubleClick(position: Int) {
-                TODO("Not yet implemented")
+                // Not implemented
             }
 
             override fun onItemSelected(position: Int) {
@@ -148,7 +179,5 @@ class HomeFragment : Fragment() {
                 Toast.makeText(requireContext(), itemMessage, Toast.LENGTH_SHORT).show()
             }
         })
-
     }
-
 }
