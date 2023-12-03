@@ -41,14 +41,13 @@ class HistoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHistoryBinding.inflate(layoutInflater, container, false)
-        // Inflate the layout for this fragment
 
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
 
         retrieveBuyHistory()
 
-        binding.recentbuyitem.setOnClickListener{
+        binding.recentbuyitem.setOnClickListener {
             seeItemsRecentBuy()
         }
 
@@ -57,18 +56,25 @@ class HistoryFragment : Fragment() {
             startActivity(intent)
         }
 
-        binding.receivedButton.setOnClickListener{
-            updateOrdefStatus()
+        binding.receivedButton.setOnClickListener {
+            updateOrderStatus()
         }
 
         return binding.root
     }
 
-    private fun updateOrdefStatus() {
+    private fun updateOrderStatus() {
         val itemPushKey = listOfOrderItem[0].itemPushKey
         val completeOrderReference = database.reference.child("CompletedOrder").child(itemPushKey!!)
         completeOrderReference.child("paymentReceived").setValue(true)
+
+        // Hide the receivedButton after clicking
+        binding.receivedButton.visibility = View.GONE
+
+        // Show the completedButton CardView
+        binding.completedButton.visibility = View.VISIBLE
     }
+
 
     private fun seeItemsRecentBuy() {
         val intent = Intent(requireContext(), RecentOrderItems::class.java)
