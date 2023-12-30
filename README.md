@@ -16,4 +16,4 @@ Anggota 2 (Rabby Ahsan Matswaya):
 Anggota 3 (Yoangga Achmad Dwi Pasanjaya):
 - Menyelesaikan fitur-fitur pada aplikasi agar dapat berjalan normal dan tidak ada bug atau masalah
 - Memastikan aplikasi dapat tersinkronisasi dengan database firebase saat melakukan CRUD sehingga
-  data yang ditampilkan pada aplikasi memang sesuai dengan data di database firebase
+  data yang ditampilkan pada aplikasi memang sesuai dengan data di database firebase 
