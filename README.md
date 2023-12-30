@@ -7,6 +7,6 @@ Nama Anggota:
 4) Yoangga Achmad Dwi Pasanjaya
 
 Job Desc:
-Anggota 1:
+Anggota 1 (Vahri Maulana):
 - Membuat tampilan antarmuka aplikasi (as a lead software engineer)
 - Membantu dan berkoordinasi backend engineer terkait pembuatan fungsi-fungsi yang ada di dalam aplikasi
