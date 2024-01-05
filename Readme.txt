@@ -17,3 +17,6 @@ Anggota 3 (Yoangga Achmad Dwi Pasanjaya):
 - Menyelesaikan fitur-fitur pada aplikasi agar dapat berjalan normal dan tidak ada bug atau masalah
 - Memastikan aplikasi dapat tersinkronisasi dengan database firebase saat melakukan CRUD sehingga
 data yang ditampilkan pada aplikasi memang sesuai dengan data di database firebase
+Anggota 4 (Hilqudz Dzikri):
+- Sebagai Backend engineer membuat fungsi fungsi yang ada di dalam sistem aplikasi serta sinkronisasi antara aplikasi user dan admin
+- Membantu untuk merencanakan alur kerja sistem aplikasi
